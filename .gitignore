@@ -1,0 +1,13 @@
+*.aux
+.DS_Store
+*.log
+~$*.docx
+*.run.xml
+*.toc
+*.lof
+*.lot
+*.bcf
+example_theses/
+..bfg-report
+ucbthesis.cls
+ucbthesis.pdf
