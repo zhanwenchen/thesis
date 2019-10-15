@@ -7,156 +7,67 @@
 % - but these shapes are ignored after STFT, because power?
 % - B mode (described in Sloun et al)
 
-\subsection{Ultrasound Beamforming}
+\subsection{Introduction to Ultrasound Beamforming}
  Diagnostic medical ultrasound has its roots in Sonar and ultrasonic metal flaw detectors. It is a noninvasive, affordable, portable, and real-time method to characterize the cross-sectional view of soft tissues compared with other imaging modalities such as Computed Tomography (CT) and magnetic resonance imaging (MRI). The underlying principle of ultrasound is the measurement of time elapsed between sending a signal and receiving its echo; given the sound speed \textit{a priori}, we can thus calculate the distance to an object based on this duration.
 
- Ultrasound imaging consists of three steps: emitting sound waves (transmit), receiving echoes (receive), and interpreting those responses. The transmit step is achieved with ultrasonic transducers - devices that convert electricity into ultrasound waves or vice versa. In ultrasound imaging, we use transceivers that both emit and receive echoes.
+ Ultrasound imaging consists of three steps: emitting sound waves (transmit), receiving echoes (receive), and interpreting those responses to form an image. The transmit step is achieved with ultrasonic transducers - devices that convert electricity into ultrasound waves or vice versa. In ultrasound imaging, we use transceivers that both emit and receive echoes.
 
  In practice, ultrasound scans are acquired with array transducers - a group of individual small transducers, each of whose pulse transmission is preciously timed by a computer. Because a single transducer element is only able to capture a single depth-dimension signal, a (horizontal) stack of such transducers can introduce the lateral (space) dimension.
 
  The most basic case of ultrasound imaging is plane wave imaging, where all transducers in an array emit the same acoustic pulses at the same time. This creates a flat wavefront, which describes the shape of a group of waves by connecting their centers. After the transmit event, the waves bounce off the medium and an impenetrable boundary, and all transducers receive the returned responses.
 
- Each transducer element measures its own voltage at every minute timestep within a small time window. The distance to an object is then calculated as $$distance = \frac{sound\,speed * timestep}{2}$$, accounting for both directions of travel. By this relationship, the time dimension becomes the distance or the depth dimension. Thus, each transducer has a series of voltages $v$ for each depth, $y$. With a horizontal or lateral series of $x$ transducers, we have a 2D matrix with each value $v = V[x, y]$ representing the sound signal/voltage measured by the $x$th transducer at depth $y$. If we scale this image to grayscale, we have an image of width $x$ and height $y$, where each pixel represents the relative intensity in the dynamic range of measured sound energy (measured in dB). A typical dynamic range is $[0, -60]dB$
 
- If the scanned object has no variation in sound impedence (for example, water, air), the flat wavefront sent out will return flat because all waves encounter the same level of resistence. Scanning pure water or air with plane waves produces a blank image because the intensity is the same (at all miniscule timesteps, each transducer receives the same amount of acoustic-electrical energy).
+ % Channel data per transducer is radio frequency (RF) data (measured in time) for each depth. EXPLAIN??????? I thought it was acoustic energy???? What's actually in it?
 
- In other nontrivial cases, the wave interactions become more interesting. Consider the example of plane wave imaging of phantoms, which are contrived composites of materials of various shapes and sound impedence.
+ Each transducer element measures its own voltage at every minute timestep within a small time window. The distance to an object is then calculated as $$distance = \frac{sound\,speed * timestep}{2}$$, accounting for both directions of travel. By this relationship, the time dimension becomes the distance or the depth dimension. Thus, each transducer has a series of acoustic signals $v$ for each depth, $y$. This 1D series is called a beam. With a horizontal or lateral series of $x$ transducers, we have a 2D matrix with each value $v = V[x, y]$ representing the sound signal/voltage measured by the $x$th transducer at depth $y$. If we scale this image to grayscale, we have an image of width $x$ and height $y$, where each pixel represents the relative intensity in the dynamic range of measured sound energy (measured in dB). A typical dynamic range is $[0, -60]dB$. The lateral dimension may be distinct from the number of transducer elements in cases where we want to interpolate the data horizontally to increase lateral resolution.
 
- Beamforming is the processing of channel data that is done in order to form an image. Channel data per transducer is radio frequency (RF) data (measured in time) for each depth. The rationale behind beamforming, or .
+ If the scanned object has no variation in sound impedence (for example, water, air), the flat wavefront sent out will return flat because all waves encounter the same level of resistence. Scanning pure water or air with plane waves produces a blank image because the intensity is the same (at all miniscule timesteps, each transducer receives the same amount of acoustic-electrical energy). It is notable, however, that waves do not propagate straight, and even in the absence of scattering media, waves still disperse. In other words, the wave emitted by one transducer can be partially received by another.
 
- Focusing
+ Now consider the nontrivial example of plane wave imaging of a phantom, which is an artificial composite of materials of various shapes and sound impedence. As was the case previously, all elements emit the same pulse at the same timesteps. However, as each pulse wave travels through the composite, it encounters divergent impedence, and some of the wave energy gets bounced off at various points in depth and at various degrees (refractions), depending on the location and the impedence of the component matrials.
 
- % Wavefronts describe a group of pulses.
+ A fundamental limitation to this basic method of plane wave imaging is the lack of focus. The images are blurry because the received signals are not strong enough relative to noise. In other words, plane wave imaging lacks focus. The rationale is that the response from adjacent elements are likely to be more relevant than those far away. !!!!Why?!!!! In practice, focus in ultrasound means using a subgroup of the total transducer array to form a single 1D depth-signal series, as opposed to one element one beam. Focused imaging maximizes signal, minimizes noise, and results in a higher signal-to-noise ratio and are more helpful clinical diagnosis.
 
- Plane waves, or unfocused waves.
+ To achieve focusing, we first select a subset of transducers (a \textit{channel} or
+ \textit{aperture}) and slide the selection by one for $num\_total\_elements$ times, where $num\_total\_elements$ is the number of total elements in the overall array. We use 0 [Where exactly does the 0-padding sliding start? Like 0th sliver comes from transducers \#0-64 or \#-32-32?]. Only elements that transmit are set to receive. In other words, each aperture both transmit and receive before we slide the window. This results in a new channel/aperture dimension to our data, in addition to the depth and lateral ones. We call this new type of data matrix \textit{channel data}.
 
- The superimposition of waves can cause constructive or destructive interferences, depending on their phases and amplitudes.
+ Within each subset, we need to send out a focused wave of a curved wavefront by taking advantage of wave interference. Waves of different phases can either add up or subtract, depending on their relative phases. We preset a focus, from which we then derive a desired wavefront. Working backwards from wave interference equations, we can determine how much time delay is needed for each transducer in each subarray. All subarrays use the same delay pattern. [How exactly does focusing work? What wavefront shape do we actually want, given focus?].
 
- A set of time-delayed (focused) transducer waves are called a beam. Beamforming maximizes signal, minimizes noise.
+ The processing of channel data in order to form an image is called beamforming. The most basic method of beamforming is delay and sum (DAS). After receive, we undo the added time delays so that we receive a flat wavefront to reflect the true depth. After applying delays, we finally operate on the channel dimension. The dimension of our post-delayed channel data is $[depth, channel, num\_total\_elements]$. To form each beam (vertical slice in the final image), we collapse its channel dimension by summing all 1D transducers responses in its aperture group.
+
+
+\subsection{Challenges in Ultrasound Beamforming}
+
+Although widely accepted, DAS beamforming is not an ideal method for clinical application due to the presence of many noises or artifacts, of which we present three: off-axis scattering, reverberation, and aberration.
+
+\subsubsection{Off-Axis-Scattering}
+
+The first such limitation is off-axis scattering. To start, scattering is. Focus. Sidelobe.
+
+% """Scattering occurs when a sound wave strikes a structure with both a different acoustic impedance to the surrounding tissue and a wavelength less than that of the incident sound wave. Such structures are known as “diffuse reflectors,” with examples being red blood cells and non-smooth surfaces of visceral organs.
+%
+% In contrast to “specular reflectors”, tissues with smooth interfaces from which ultrasound waves are reflected in a specular fashion, “diffuse reflectors” cause ultrasound waves to scatter in all directions thus resulting in multiple echoes propagating from the numerous tiny structures. Not only does this scattering result in echoes with smaller amplitudes (compared to specular reflection) but the scattered echoes also interact with each other. This interaction causes constructive and destructive interference of the waves. The resultant image is termed “speckle” due to the various intensities of the echoes received by the transducer, and this is seen as an irregularity in the greyscale of the image.
+%
+% Most echoes from ultrasound imaging arise from scattering, rather than the reflection from specular reflectors. The speckle arising from this scatter results in the grainy appearance of the parenchyma of organs and also the signal in doppler ultrasound."""
+
+
+
+ % The superimposition of waves can cause constructive or destructive interferences, depending on their phases and amplitudes.
+
+ % A set of time-delayed (focused) transducer waves are called a beam.
 
 % Brightness mode, or B-mode, .
 %
-% - DAS (described in Sloun et al)
-
-\subsection{Challenges}
-- Aberration (described in Sloun et al)
-
-
-\subsection{Neural-Network Methods}
-Aperture Domain Model Image REconstruction (ADMIRE)\cite{admire2017}.
-
-
-\subsection{Noises}
-\subsubsection{Off-Axis Scattering}
-\subsubsection{Reverberation}
+% \subsection{Neural-Network Methods}
+% Aperture Domain Model Image REconstruction (ADMIRE)\cite{admire2017}.
 
 
 
-\subsection{Traditional Noise Suppression Methods}
-\subsection{Machine Learning Noise Suppression Methods}
-\subsection{Convolutional Neural Networks Methods}
+% \subsection{Traditional Noise Suppression Methods}
+% \subsection{Machine Learning Noise Suppression Methods}
+% \subsection{Convolutional Neural Networks Methods}
 
 
-\begin{table}
-\begin{center}
-\begin{tabular}{|c|c|c|}
-\hline
-1-2-3 & yes & no \\
-\hline
-Multiplan & yes & yes \\
-\hline
-Wordstar & no & no \\
-\hline
-\end{tabular}
-\end{center}
-\caption{Pigeonhole sportsman grin  historic stockpile.}
-\end{table}
-Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.
-Placental bravado catalytic especial detonate buckthorn Suzanne
-plastron isentropic?  Glory characteristic.  Denature?  Pigeonhole
-sportsman grin historic stockpile. Doctrinaire marginalia and art.
-Sony tomography.
-
-\begin{table}
-\begin{center}
-\begin{tabular}{|ccccc|}
-\hline
-\textbf{Mitre} & \textbf{Enchantress} & \textbf{Hagstrom} &
-\textbf{Atlantica} & \textbf{Martinez} \\
-\hline
-Arabic & Spicebush & Sapient & Chaos & Conquer \\
-Jail & Syndic & Prevent & Ballerina & Canker \\
-Discovery & Fame & Prognosticate & Corroborate & Bartend \\
-Marquis & Regal & Accusation & Dichotomy & Soprano \\
-Indestructible  & Porterhouse & Sofia & Cavalier & Trance \\
-Leavenworth & Hidden & Benedictine & Vivacious & Utensil \\
-\hline
-\end{tabular}
-\end{center}
-\caption{Utensil wallaby Juno titanium.}
-\end{table}
-
-Aviv censor seventh, conjugal.  Faceplate emittance borough airline.
-Salutary.  Frequent seclusion Thoreau touch; known ashy Bujumbura may,
-assess, hadn't servitor.  Wash\cite{cmusic}, Doff, and Algorithm.
-
-\begin{figure}
-\[ \begin{picture}(90,50)
-  \put(0,0){\circle*{5}}
-  \put(0,0){\vector(1,1){31.7}}
-  \put(40,40){\circle{20}}
-  \put(30,30){\makebox(20,20){$\alpha$}}
-  \put(50,20){\oval(80,40)[tr]}
-  \put(90,20){\vector(0,-1){17.5}}
-  \put(90,0){\circle*{5}}
-\end{picture}
- \]
-\caption{Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.
-Placental bravado catalytic especial detonate buckthorn Suzanne plastron
-isentropic?  Glory characteristic.  Denature?  Pigeonhole sportsman grin.}
-\end{figure}
-
-Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.
-Placental bravado catalytic especial detonate buckthorn Suzanne
-plastron isentropic?  Glory characteristic.  Denature?  Pigeonhole
-sportsman grin historic stockpile. Doctrinaire marginalia and art.
-Sony tomography.  Aviv censor seventh, conjugal.  Faceplate emittance
-borough airline.\cite{fm} Salutary.  Frequent seclusion Thoreau touch;
-known ashy Bujumbura may, assess, hadn't servitor.  Wash, Doff, and
-Algorithm.
-
-\begin{itemize}
-\item Davidson witting and grammatic.  Jukes foundry mesh sting speak,
-Gillespie, Birmingham Bentley.  Hedgehog, swollen McGuire; gnat.
-Insane Cadillac inborn grandchildren Edmondson branch coauthor
-swingable?  Lap Kenney Gainesville infiltrate.  Leap and dump?
-Spoilage bluegrass.  Diesel aboard Donaldson affectionate cod?
-Vermiculite pemmican labour Greenberg derriere Hindu.  Stickle ferrule
-savage jugging spidery and animism.
-\item Hoofmark and Avogadro ionosphere.
-\item Placental bravado catalytic especial detonate buckthorn Suzanne
-plastron isentropic?
-\item Glory characteristic.  Denature?  Pigeonhole sportsman grin
-historic stockpile.
-\item Doctrinaire marginalia and art.  Sony tomography.
-\item Aviv censor seventh, conjugal.
-\item Faceplate emittance borough airline.
-\item Salutary.  Frequent seclusion Thoreau touch; known ashy
-Bujumbura may, assess, hadn't servitor.  Wash, Doff, and Algorithm.
-\end{itemize}
-
-Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.
-Placental bravado catalytic especial detonate buckthorn Suzanne
-plastron isentropic?  Glory characteristic.  Denature?  Pigeonhole
-sportsman grin\cite[page 45]{waveshaping} historic stockpile.
-Doctrinaire marginalia and art. Sony tomography.  Aviv censor seventh,
-conjugal. Faceplate emittance borough airline.  Salutary.  Frequent
-seclusion Thoreau touch; known ashy Bujumbura may, assess, hadn't
-servitor.  Wash, Doff, and Algorithm.
-
-\begin{theorem}
-\tolerance=10000\hbadness=10000
-Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.
-Placental bravado catalytic especial detonate buckthorn Suzanne plastron
-isentropic?
-\end{theorem}
+\subsection{Solutions to Reduce Noise}
+\subsubsection{Traditional Methods}
+\subsubsection{Machine Learning Methods}
+\subsubsection{Deep Learning Methods}
