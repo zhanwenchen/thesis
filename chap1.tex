@@ -2,22 +2,25 @@
 
 \section{Ultrasound Beamforming}
 
-% this is lol\
-% - beamforming - do all elements have the same phase and amplitude? Yes, unless in rare cases of  apodization.
-% - predelayed == focused?
-- every transmit has parameters
-- these parameters give a distinct pulse shape
-- but these shapes are ignored after STFT, because power?
-- B mode (described in Sloun et al)
+% - every transmit has parameters
+% - these parameters give a distinct pulse shape
+% - but these shapes are ignored after STFT, because power?
+% - B mode (described in Sloun et al)
 
 \subsection{Ultrasound Beamforming}
- Diagnostic medical ultrasound has its roots from Sonar and ultrasonic metal flaw detectors. It is a noninvasive, affordable, portable, and real-time option to characterize the cross-sectional view of soft tissues compared with other imaging modalities such as Computed Tomography (CT) and magnetic resonance imaging (MRI). The underlying principle of ultrasound is the measurement of time elapsed between sending a signal and receiving its echo; given the sound speed a priori, we can thus calculate the distince to an object based on this duration.
+ Diagnostic medical ultrasound has its roots in Sonar and ultrasonic metal flaw detectors. It is a noninvasive, affordable, portable, and real-time method to characterize the cross-sectional view of soft tissues compared with other imaging modalities such as Computed Tomography (CT) and magnetic resonance imaging (MRI). The underlying principle of ultrasound is the measurement of time elapsed between sending a signal and receiving its echo; given the sound speed \textit{a priori}, we can thus calculate the distance to an object based on this duration.
 
- Ultrasound imaging consists of three steps: emitting sound waves (transmit), receiving echoes (receive), and interpreting those echoes. The transmit step is achieved with ultrasonic transducers - devices that convert electricity into ultrasound waves and vice versa. In other words, we consider transceivers which both emit and receive echoes.
+ Ultrasound imaging consists of three steps: emitting sound waves (transmit), receiving echoes (receive), and interpreting those responses. The transmit step is achieved with ultrasonic transducers - devices that convert electricity into ultrasound waves or vice versa. In ultrasound imaging, we use transceivers that both emit and receive echoes.
 
  In practice, ultrasound scans are acquired with array transducers - a group of individual small transducers, each of whose pulse transmission is preciously timed by a computer. Because a single transducer element is only able to capture a single depth-dimension signal, a (horizontal) stack of such transducers can introduce the lateral (space) dimension.
 
- The most basic case of ultrasound imaging is plane wave imaging, where all transducers in an array emit the same acoustic pulses at the same time. This creates a flat wavefront, which describes the shape of a group of waves by connecting their centers. After the transmit event, all elements receive the responses. Each transducer element measures its own voltage at every (parameterized) timestep. If the scanned object has no variation in sound impedence (for example, water, air), the flat wavefront sent out will return flat.
+ The most basic case of ultrasound imaging is plane wave imaging, where all transducers in an array emit the same acoustic pulses at the same time. This creates a flat wavefront, which describes the shape of a group of waves by connecting their centers. After the transmit event, the waves bounce off the medium and an impenetrable boundary, and all transducers receive the returned responses.
+
+ Each transducer element measures its own voltage at every minute timestep within a small time window. The distance to an object is then calculated as $$distance = \frac{sound\,speed * timestep}{2}$$, accounting for both directions of travel. By this relationship, the time dimension becomes the distance or the depth dimension. Thus, each transducer has a series of voltages $v$ for each depth, $y$. With a horizontal or lateral series of $x$ transducers, we have a 2D matrix with each value $v = V[x, y]$ representing the sound signal/voltage measured by the $x$th transducer at depth $y$. If we scale this image to grayscale, we have an image of width $x$ and height $y$, where each pixel represents the relative intensity in the dynamic range of measured sound energy (measured in dB). A typical dynamic range is $[0, -60]dB$
+
+ If the scanned object has no variation in sound impedence (for example, water, air), the flat wavefront sent out will return flat because all waves encounter the same level of resistence. Scanning pure water or air with plane waves produces a blank image because the intensity is the same (at all miniscule timesteps, each transducer receives the same amount of acoustic-electrical energy).
+
+ In other nontrivial cases, the wave interactions become more interesting. Consider the example of plane wave imaging of phantoms, which are contrived composites of materials of various shapes and sound impedence.
 
  Beamforming is the processing of channel data that is done in order to form an image. Channel data per transducer is radio frequency (RF) data (measured in time) for each depth. The rationale behind beamforming, or .
 
