@@ -1,0 +1,236 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{admire2017}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=03856dec85cc7d88637d52c886325355}{%
+           family={{Byram}},
+           familyi={B\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{03856dec85cc7d88637d52c886325355}
+      \strng{fullhash}{03856dec85cc7d88637d52c886325355}
+      \strng{bibnamehash}{03856dec85cc7d88637d52c886325355}
+      \strng{authorbibnamehash}{03856dec85cc7d88637d52c886325355}
+      \strng{authornamehash}{03856dec85cc7d88637d52c886325355}
+      \strng{authorfullhash}{03856dec85cc7d88637d52c886325355}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}
+      \field{month}{3}
+      \field{title}{Aperture Domain Model Image REconstruction (ADMIRE) for improved ultrasound imaging}
+      \field{year}{2017}
+      \field{pages}{6250\bibrangedash 6253}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICASSP.2017.7953358
+      \endverb
+      \keyw{array signal processing;image reconstruction;medical image processing;ultrasonic imaging;aperture domain model image reconstruction;ADMIRE;improved ultrasound imaging;clinical ultrasound;MVDR beamformer;image quality improvement;low-quality images;Clutter;Ultrasonic imaging;Acoustics;Adaptation models;Array signal processing;Scattering;Delays;Ultrasound;Beamforming;Clutter;Reverberation;Model}
+    \endentry
+    \entry{hyun_uffc_2019}{article}{}
+      \name{author}{4}{}{%
+        {{hash=08bd9c6b2db827aac14273f0e5755216}{%
+           family={{Hyun}},
+           familyi={H\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=902f706abb70dc07121d61bafc88212b}{%
+           family={{Brickson}},
+           familyi={B\bibinitperiod},
+           given={L.\bibnamedelimi L.},
+           giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=1e3d5548f76c58750ff15dd7d2babb36}{%
+           family={{Looby}},
+           familyi={L\bibinitperiod},
+           given={K.\bibnamedelimi T.},
+           giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=fd63867ebdcb236ea8399ef4eb059e1d}{%
+           family={{Dahl}},
+           familyi={D\bibinitperiod},
+           given={J.\bibnamedelimi J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{39575ecc5e6059292ba5e71844da0c68}
+      \strng{fullhash}{ad9051595bf11162debee1418f810ba3}
+      \strng{bibnamehash}{39575ecc5e6059292ba5e71844da0c68}
+      \strng{authorbibnamehash}{39575ecc5e6059292ba5e71844da0c68}
+      \strng{authornamehash}{39575ecc5e6059292ba5e71844da0c68}
+      \strng{authorfullhash}{ad9051595bf11162debee1418f810ba3}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{Beamforming and Speckle Reduction Using Neural Networks}
+      \field{volume}{66}
+      \field{year}{2019}
+      \field{pages}{898\bibrangedash 910}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/TUFFC.2019.2903795
+      \endverb
+      \keyw{array signal processing;biomedical ultrasonics;convolutional neural nets;filtering theory;image denoising;image reconstruction;image resolution;learning (artificial intelligence);medical image processing;phantoms;speckle;ultrasonic imaging;real-world imaging;reduced speckle;traditional beamforming methods;ultrasound B-mode images;speckle noise;ultrasound channel signals;speckle-reduced B-mode images;log-domain normalization-independent loss functions;ultrasound imaging;fully convolutional neural network;simulated channel signals;training performance;network depth;network width;widest networks;normalization-independent mixture;multiscale structural similarity losses;ultrasound B-mode image reconstruction;machine-learned neural networks;speckle reduction techniques;beamformed subaperture radio frequency signals;B;Speckle;Imaging;Array signal processing;Ultrasonic imaging;Neural networks;Image reconstruction;Acoustics;Amplitude estimation;neural networks;signal denoising;supervised learning;ultrasonic imaging}
+    \endentry
+    \entry{field_ii}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=cc2e6ca98f1c5480631bb69351af4157}{%
+           family={Jensen},
+           familyi={J\bibinitperiod},
+           given={J.A.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{cc2e6ca98f1c5480631bb69351af4157}
+      \strng{fullhash}{cc2e6ca98f1c5480631bb69351af4157}
+      \strng{bibnamehash}{cc2e6ca98f1c5480631bb69351af4157}
+      \strng{authorbibnamehash}{cc2e6ca98f1c5480631bb69351af4157}
+      \strng{authornamehash}{cc2e6ca98f1c5480631bb69351af4157}
+      \strng{authorfullhash}{cc2e6ca98f1c5480631bb69351af4157}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{10th Nordic-Baltic Conference on Biomedical Imaging Published in Medical \& Biological Engineering \& Computing}
+      \field{title}{Field: A Program for Simulating Ultrasound Systems}
+      \field{volume}{34}
+      \field{year}{1996}
+      \field{pages}{351\bibrangedash 353}
+      \range{pages}{3}
+    \endentry
+    \entry{luchies_tmi_2018}{article}{}
+      \name{author}{2}{}{%
+        {{hash=97dfe7497dc109dcbf6b930fdc6a76e4}{%
+           family={{Luchies}},
+           familyi={L\bibinitperiod},
+           given={A.\bibnamedelimi C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=33e4a590c1159da419483e676efb0b4e}{%
+           family={{Byram}},
+           familyi={B\bibinitperiod},
+           given={B.\bibnamedelimi C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{368fca9999445407eb72c7885d038781}
+      \strng{fullhash}{368fca9999445407eb72c7885d038781}
+      \strng{bibnamehash}{368fca9999445407eb72c7885d038781}
+      \strng{authorbibnamehash}{368fca9999445407eb72c7885d038781}
+      \strng{authornamehash}{368fca9999445407eb72c7885d038781}
+      \strng{authorfullhash}{368fca9999445407eb72c7885d038781}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Medical Imaging}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{Deep Neural Networks for Ultrasound Beamforming}
+      \field{volume}{37}
+      \field{year}{2018}
+      \field{pages}{2010\bibrangedash 2021}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/TMI.2018.2809641
+      \endverb
+      \keyw{array signal processing;biomedical ultrasonics;Fourier transforms;image reconstruction;liver;medical image processing;neural nets;phantoms;ultrasonic imaging;single frequency;single depth;in vivo scans;quadrature components;separated real components;frequency domain;ultrasound channel data;ultrasound beamforming;deep neural networks;contrast-to-noise ratio;DNN approach improved contrast ratio;simulated anechoic cyst;standard DAS;simulated point target;physical phantom experiment;inverse short-time Fourier transform;complex data;imaginary components;noise figure 0.3 dB;noise figure 0.7 dB;noise figure 60.0 dB;noise figure 9.7 dB;Ultrasonic imaging;Frequency-domain analysis;Training;Neurons;Neural networks;Array signal processing;Scattering;Ultrasound imaging;neural networks;beamforming;image contrast enhancement;off-axis scattering}
+    \endentry
+    \entry{unet}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=8e46da9de9e53ea5d37089897d69cdd9}{%
+           family={Ronneberger},
+           familyi={R\bibinitperiod},
+           given={Olaf},
+           giveni={O\bibinitperiod}}}%
+        {{hash=168e84ce3582cbc6bac5e2ebc3ef8442}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b452a32296958371572717940f900884}{%
+           family={Brox},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{fullhash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{bibnamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authorbibnamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authornamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authorfullhash}{f23ccc5160c62c7866172335b2c76e11}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Medical image computing and computer-assisted intervention}
+      \field{title}{U-net: Convolutional networks for biomedical image segmentation}
+      \field{year}{2015}
+      \field{pages}{234\bibrangedash 241}
+      \range{pages}{8}
+    \endentry
+    \entry{van_sloun_review}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c502e05c5f1cfc333b9f82104d599933}{%
+           family={{van Sloun}},
+           familyi={v\bibinitperiod},
+           given={R.\bibnamedelimi J.\bibnamedelimi G.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=931b341c37281aa4ac6d835439c3651f}{%
+           family={{Cohen}},
+           familyi={C\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=415f44e2082668373058923a3bc916f1}{%
+           family={{Eldar}},
+           familyi={E\bibinitperiod},
+           given={Y.\bibnamedelimi C.},
+           giveni={Y\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{451b9c23bdf285c7c9974cea402f8b40}
+      \strng{fullhash}{451b9c23bdf285c7c9974cea402f8b40}
+      \strng{bibnamehash}{451b9c23bdf285c7c9974cea402f8b40}
+      \strng{authorbibnamehash}{451b9c23bdf285c7c9974cea402f8b40}
+      \strng{authornamehash}{451b9c23bdf285c7c9974cea402f8b40}
+      \strng{authorfullhash}{451b9c23bdf285c7c9974cea402f8b40}
+      \field{sortinit}{v}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{title}{Deep Learning in Ultrasound Imaging}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 19}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1109/JPROC.2019.2932116
+      \endverb
+      \keyw{Imaging;Ultrasonic imaging;Doppler effect;Deep learning;Array signal processing;Image resolution;Clutter;Beamforming;compression;deep learning;deep unfolding;Doppler;image reconstruction;super resolution;ultrasound imaging.}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

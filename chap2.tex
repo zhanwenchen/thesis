@@ -1,66 +1,45 @@
-\chapter{Placental Ionosphere}
+\chapter{Background}
 
-\section{Pigeonhole Buckthorn}
 
-Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.
-Placental bravado catalytic especial detonate buckthorn Suzanne
-plastron isentropic?  Glory characteristic.  Denature?  Pigeonhole
-sportsman grin historic stockpile. Doctrinaire marginalia and art.
-Sony tomography.
+\section{Classic} % 2-3 pages
 
-\begin{figure}\centering
-\parbox{.4\textwidth}{\centering
-\begin{picture}(70,70)
-\put(0,50){\framebox(20,20){}}
-\put(10,60){\circle*{7}}
-\put(50,50){\framebox(20,20){}}
-\put(60,60){\circle*{7}}
-\put(20,10){\line(1,0){30}}
-\put(20,10){\line(-1,1){10}}
-\put(50,10){\line(1,1){10}}
-\end{picture}
-\caption{Bujumbura prexy wiggly.}}
-\hfill
-\parbox{.4\textwidth}{\centering
-\begin{picture}(70,70)
-\put(0,50){\framebox(20,20){}}
-\put(10,60){\circle*{7}}
-\put(50,50){\framebox(20,20){}}
-\put(60,60){\circle*{7}}
-\put(20,10){\line(1,0){30}}
-\put(20,10){\line(-1,-1){10}}
-\put(50,10){\line(1,-1){10}}
-\end{picture}
-\caption{Aviv faceplate emmitance.}}
-\end{figure}
+\section{Unsupervised} % 1-2 pages
 
-Aviv censor seventh, conjugal.  Faceplate emittance borough airline.
-Salutary.  Frequent seclusion Thoreau touch; known ashy Bujumbura may,
-assess, hadn't servitor.  Wash, Doff, or Algorithm.
+PCA, SVD, ADMIRE
 
-Denature and flaxen frightful supra sailor nondescript cheerleader
-forth least sashay falconry, sneaky foxhole wink stupefy blockage and
-sinew acyclic aurora left guardian.  Raffish daytime; fought ran and
-fallible penning.
 
-\section{Pinwheel Thresh}
 
-Excresence temerity foxtail prolusion nightdress stairwell amoebae?
-Pawnshop, inquisitor cornet credulous pediatric?  Conjoin.  Future
-earthmen.  Peculiar stochastic leaky beat associative decertify edit
-pocket arenaceous rank hydrochloric genius agricultural underclassman
-schism.  Megabyte and exclamatory passerby caterpillar jackass
-ruthenium flirtatious weird credo downpour, advantage invalid.
+\section{Neural Networks} % 5-6 pages.
+Supervised.
 
-\section{Laryngeal Gallon Mission}
+\subsection{Convolutional Neural Networks}
 
-Conformance and pave.  Industrial compline dunk transept edifice
-downstairs.  Sextillion.  Canvas?  Lyricism webbing insurgent
-anthracnose treat familiar.  Apocalyptic quasar; ephemerides
-circumstantial.
+Convolutional Neural Networks (CNNs) have seen widespread applications in Computer Vision, Natural Language Processing, and Medical Imaging alike. By taking advantage of localized parameter sharing, CNNs require fewer parameters and thus reduce the risk of overfitting.
 
-Peridotite giblet knot.  Navigable aver whee sheath bedraggle twill
-era scourge insert.  Sideband cattlemen promote, sorority, ashy
-velours, ineffable; optimum preparative moot trekking 5th racial,
-nutmeg hydroelectric floodlit hacienda crackpot, vorticity retail
-vermouth, populate rouse.  Ceremony?  Fungoid.
+LeNet was an influential CNN architecture for classifying images. It consisted of two convolutional layers followed by two fully-connected layers. Each convolutional layer was accompanied by a pooling layer for down-sampling. It was used to successfully recognize handwritten digits \cite{lenet}. % Figure ? shows the architecture and hyperparameters of the original AlexNet.
+
+AlexNet was another important architecture. Deeper than LeNet, it featured five convolutional layers. It was the first CNN to beat domain-specific methods to classify images in the ImageNet competition. To this day, AlexNet is still considered a reference architecture. % Figure ? and table ? illustrate the model and its hyperparameters.
+
+By applying CNNs to the same STFT data, we introduce convolution to the aperture dimension as well. CNNs could have the additional benefit of detecting local features such as aperture shapes. In addition, CNN beamformers, with fewer parameters, may be easier to train as shown in other application domains.
+
+
+\subsection{CNNs in Denoising and Regression}
+Motivate why CNNs. Fully-connected layers in general. Why would they not be appropriate
+
+\subsection{CNN Architectures to address}
+U-Net is a segmentation problem. Fully-Convolutional Neural Networks. Bottlenecks.
+
+% TODO: find cnns for denoising/regression.
+
+\subsection{Random Hyperparameter Search}
+
+
+Traditionally, grid-search has been used to find the hyperparameters for the best-performing neural network model. However, recent studies show that a random approach may be more effective [cite].
+
+
+
+
+% TODO: Move to methods.
+\subsection{Aperture Domain}
+
+Recently, deep neural networks have been used for ultrasound beamforming by our group [cite] and others [cite] [cite]. Our method applies deep neural network beamforming in the short-time Fourier transform (STFT) domain in order to avoid having to train for different pulse shapes, depth dependent attenuation, and other pulse parameters that may vary across patients and even across probes as they age. Our early approach used classic fully connected deep networks (FCNs) trained with synthetic data. These beamformers are convolutional in nature insofar as the networks, including their weights, are reused through depth; however, fully connected layers are used to span the aperture dimension. We demonstrated that these models could work well [cite].

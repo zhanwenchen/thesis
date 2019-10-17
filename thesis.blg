@@ -1,0 +1,19 @@
+[0] Config.pm:302> INFO - This is Biber 2.11
+[0] Config.pm:305> INFO - Logfile is 'thesis.blg'
+[37] biber-darwin:313> INFO - === Thu Oct 17, 2019, 07:50:29
+[58] Biber.pm:371> INFO - Reading 'thesis.bcf'
+[138] Biber.pm:857> INFO - Found 6 citekeys in bib section 0
+[149] Biber.pm:3976> INFO - Processing section 0
+[159] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
+[160] bibtex.pm:1500> INFO - LaTeX decoding ...
+[175] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
+[180] Utils.pm:193> WARN - month field 'March' in entry 'admire2017' is not an integer - this will probably not sort properly.
+[184] Utils.pm:193> WARN - month field 'Sep.' in entry 'luchies_tmi_2018' is not an integer - this will probably not sort properly.
+[202] Utils.pm:193> WARN - month field 'May' in entry 'hyun_uffc_2019' is not an integer - this will probably not sort properly.
+[217] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[217] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[218] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[218] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[224] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[227] bbl.pm:720> INFO - Output to thesis.bbl
+[227] Biber.pm:110> INFO - WARNINGS: 3

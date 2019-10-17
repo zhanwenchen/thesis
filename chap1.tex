@@ -1,73 +1,77 @@
 \chapter{Introduction}
 
-\section{Ultrasound Beamforming}
-
 % - every transmit has parameters
 % - these parameters give a distinct pulse shape
 % - but these shapes are ignored after STFT, because power?
-% - B mode (described in Sloun et al)
 
-\subsection{Introduction to Ultrasound Beamforming}
+\section{Introduction to Ultrasound Beamforming}
  Diagnostic medical ultrasound has its roots in Sonar and ultrasonic metal flaw detectors. It is a noninvasive, affordable, portable, and real-time method to characterize the cross-sectional view of soft tissues compared with other imaging modalities such as Computed Tomography (CT) and magnetic resonance imaging (MRI). The underlying principle of ultrasound is the measurement of time elapsed between sending a signal and receiving its echo; given the sound speed \textit{a priori}, we can thus calculate the distance to an object based on this duration.
 
  Ultrasound imaging consists of three steps: emitting sound waves (transmit), receiving echoes (receive), and interpreting those responses to form an image. The transmit step is achieved with ultrasonic transducers - devices that convert electricity into ultrasound waves or vice versa. In ultrasound imaging, we use transceivers that both emit and receive echoes.
 
  In practice, ultrasound scans are acquired with array transducers - a group of individual small transducers, each of whose pulse transmission is preciously timed by a computer. Because a single transducer element is only able to capture a single depth-dimension signal, a (horizontal) stack of such transducers can introduce the lateral (space) dimension.
 
- The most basic case of ultrasound imaging is plane wave imaging, where all transducers in an array emit the same acoustic pulses at the same time. This creates a flat wavefront, which describes the shape of a group of waves by connecting their centers. After the transmit event, the waves bounce off the medium and an impenetrable boundary, and all transducers receive the returned responses.
+ The most basic case of ultrasound imaging is plane wave imaging, where all transducers in an array emit the same acoustic pulses at the same time. This creates a flat wavefront, which describes the shape of a group of waves by connecting their centers. After the transmit event, the waves propagate the field of view and are scattered back to the transducers as pulse-echo responses.
 
 
  % Channel data per transducer is radio frequency (RF) data (measured in time) for each depth. EXPLAIN??????? I thought it was acoustic energy???? What's actually in it?
 
- Each transducer element measures its own voltage at every minute timestep within a small time window. The distance to an object is then calculated as $$distance = \frac{sound\,speed * timestep}{2}$$, accounting for both directions of travel. By this relationship, the time dimension becomes the distance or the depth dimension. Thus, each transducer has a series of acoustic signals $v$ for each depth, $y$. This 1D series is called a beam. With a horizontal or lateral series of $x$ transducers, we have a 2D matrix with each value $v = V[x, y]$ representing the sound signal/voltage measured by the $x$th transducer at depth $y$. If we scale this image to grayscale, we have an image of width $x$ and height $y$, where each pixel represents the relative intensity in the dynamic range of measured sound energy (measured in dB). A typical dynamic range is $[0, -60]dB$. The lateral dimension may be distinct from the number of transducer elements in cases where we want to interpolate the data horizontally to increase lateral resolution.
+ Each transducer element samples its measured acoustic pressure (in dB) at each timestep within a small time window. The distance to an object is then calculated as $$distance = \frac{sound\,speed * timestep}{2}$$, accounting for both directions of travel. With this relationship, the time dimension can be translated to the distance or the depth dimension. Thus, each transducer has a series of acoustic signals $v$ for each depth, $y$. With a horizontal or lateral series of $x$ transducers, we have a 2D matrix with each value $v = V[x, y]$ representing the sound signal/acoustic energy measured by the $x$th transducer at depth $y$. If we scale this image to grayscale, we have an image of width $x$ and height $y$, where each pixel represents the relative intensity in the dynamic range of measured sound energy. A typical dynamic range is $[0, -60]dB$. This image modality is called brightness mode, or B-mode. The lateral dimension may be distinct from the number of transducer elements in cases of horizontal interpolatation to increase lateral resolution.
 
- If the scanned object has no variation in sound impedence (for example, water, air), the flat wavefront sent out will return flat because all waves encounter the same level of resistence. Scanning pure water or air with plane waves produces a blank image because the intensity is the same (at all miniscule timesteps, each transducer receives the same amount of acoustic-electrical energy). It is notable, however, that waves do not propagate straight, and even in the absence of scattering media, waves still disperse. In other words, the wave emitted by one transducer can be partially received by another.
+ If the scanned object has no variation in sound impedance (for example, water, air), the flat wavefront sent out will return at the same timesteps, because all waves encounter the same level of resistence. Scanning pure water or air with plane waves produces a blank image because the intensity is the same (at all miniscule timesteps, each transducer receives the same amount of acoustic pressure). It is notable, however, that waves do not propagate straight, and even in the absence of scattering media, waves still disperse. In other words, the wave emitted by one transducer can be partially received by another.
 
- Now consider the nontrivial example of plane wave imaging of a phantom, which is an artificial composite of materials of various shapes and sound impedence. As was the case previously, all elements emit the same pulse at the same timesteps. However, as each pulse wave travels through the composite, it encounters divergent impedence, and some of the wave energy gets bounced off at various points in depth and at various degrees (refractions), depending on the location and the impedence of the component matrials.
+ Now consider the nontrivial example of plane wave imaging of a phantom, which is an artificial composite of materials of various shapes and sound impedance. As was the case previously, all elements emit the same pulse at the same timesteps. However, as each pulse wave travels through the composite, it encounters divergent impedance, and some of the wave energy gets scattered at various points in depth and at various degrees (refractions), depending on the location and the impedance of the component matrials. This difference in intensity generates signal in the resulting image, which should characterize the cross-sectional view of the phantom.
 
- A fundamental limitation to this basic method of plane wave imaging is the lack of focus. The images are blurry because the received signals are not strong enough relative to noise. In other words, plane wave imaging lacks focus. The rationale is that the response from adjacent elements are likely to be more relevant than those far away. !!!!Why?!!!! In practice, focus in ultrasound means using a subgroup of the total transducer array to form a single 1D depth-signal series, as opposed to one element one beam. Focused imaging maximizes signal, minimizes noise, and results in a higher signal-to-noise ratio and are more helpful clinical diagnosis.
+ A fundamental limitation to this basic method of plane wave imaging is the lack of focus. The images are blurry because the received signals are not strong enough relative to noise. We want to focus our transducers because the responses from adjacent elements are more relevant than those far away. In practice, focus in ultrasound requires a subgroup of the total transducer array to form a single 1D depth-signal series, as opposed to one series for each element. A set of time-delayed (focused) transducer waves are called a beam. Focused imaging maximizes signal, minimizes noise, and results in a higher signal-to-noise ratio. Images generated this way are more helpful to clinical diagnosis.
 
  To achieve focusing, we first select a subset of transducers (a \textit{channel} or
- \textit{aperture}) and slide the selection by one for $num\_total\_elements$ times, where $num\_total\_elements$ is the number of total elements in the overall array. We use 0 [Where exactly does the 0-padding sliding start? Like 0th sliver comes from transducers \#0-64 or \#-32-32?]. Only elements that transmit are set to receive. In other words, each aperture both transmit and receive before we slide the window. This results in a new channel/aperture dimension to our data, in addition to the depth and lateral ones. We call this new type of data matrix \textit{channel data}.
+ \textit{aperture}) and slide the selection by one element for $num\_total\_elements$ times, where $num\_total\_elements$ is the number of total elements in the overall array. Only elements that transmit are set to receive. In other words, each aperture both transmit and receive before we slide the window. This results in a new channel/aperture dimension to our data, in addition to the depth and lateral ones. We call this new type of data matrix \textit{channel data}. % We use 0  [Where exactly does the 0-padding sliding start? Like 0th sliver comes from transducers \#0-64 or \#-32-32?].
 
- Within each subset, we need to send out a focused wave of a curved wavefront by taking advantage of wave interference. Waves of different phases can either add up or subtract, depending on their relative phases. We preset a focus, from which we then derive a desired wavefront. Working backwards from wave interference equations, we can determine how much time delay is needed for each transducer in each subarray. All subarrays use the same delay pattern. [How exactly does focusing work? What wavefront shape do we actually want, given focus?].
+ Within each subset, we need to send out a focused wave of a curved wavefront by taking advantage of wave interference. The superimposition of waves can cause constructive or destructive interferences, depending on their relative phases and amplitudes upon contact. We preset a focus (typically controlled by a knob on an ultrasound machine), from which we then derive a desired wavefront. Working backwards from wave interference equations, we can determine how much time delay is needed for each transducer in each subarray. All subarrays use the same delay pattern. The ultrasound machine typically applies the delays automatically. % [How exactly does focusing work? What wavefront shape do we actually want, given focus?].
 
- The processing of channel data in order to form an image is called beamforming. The most basic method of beamforming is delay and sum (DAS). After receive, we undo the added time delays so that we receive a flat wavefront to reflect the true depth. After applying delays, we finally operate on the channel dimension. The dimension of our post-delayed channel data is $[depth, channel, num\_total\_elements]$. To form each beam (vertical slice in the final image), we collapse its channel dimension by summing all 1D transducers responses in its aperture group.
-
-
-\subsection{Challenges in Ultrasound Beamforming}
-
-Although widely accepted, DAS beamforming is not an ideal method for clinical application due to the presence of many noises or artifacts, of which we present three: off-axis scattering, reverberation, and aberration.
-
-\subsubsection{Off-Axis-Scattering}
-
-The first such limitation is off-axis scattering. To start, scattering is. Focus. Sidelobe.
-
-% """Scattering occurs when a sound wave strikes a structure with both a different acoustic impedance to the surrounding tissue and a wavelength less than that of the incident sound wave. Such structures are known as “diffuse reflectors,” with examples being red blood cells and non-smooth surfaces of visceral organs.
-%
-% In contrast to “specular reflectors”, tissues with smooth interfaces from which ultrasound waves are reflected in a specular fashion, “diffuse reflectors” cause ultrasound waves to scatter in all directions thus resulting in multiple echoes propagating from the numerous tiny structures. Not only does this scattering result in echoes with smaller amplitudes (compared to specular reflection) but the scattered echoes also interact with each other. This interaction causes constructive and destructive interference of the waves. The resultant image is termed “speckle” due to the various intensities of the echoes received by the transducer, and this is seen as an irregularity in the greyscale of the image.
-%
-% Most echoes from ultrasound imaging arise from scattering, rather than the reflection from specular reflectors. The speckle arising from this scatter results in the grainy appearance of the parenchyma of organs and also the signal in doppler ultrasound."""
+ The processing of channel data in order to form an image is called beamforming. The most basic method of beamforming is delay and sum (DAS). After receive, we undo the added time delays so that we receive a flat wavefront to reflect the true depth. After applying delays, we finally operate on the channel dimension. The dimension of our post-delayed channel data is $[depth, elements\_per\_channel, num\_total\_elements]$. To form each beam (vertical slice in the final image), we collapse its channel dimension by summing all 1D transducers responses in its aperture group, resulting in a new data matrix of size $[depth, num\_total\_elements]$, called radio frequency (RF) data. RF data is the basis for a beamformed image, which then undergoes filtering and upsampling, depending on the specific application requirements. % TODO: num\_total\_elements => num\_beams?
 
 
+\section{Challenges in Ultrasound Beamforming}
 
- % The superimposition of waves can cause constructive or destructive interferences, depending on their phases and amplitudes.
+Although widely accepted, DAS beamforming is not an ideal method for clinical application due to the presence of many noises or artifacts, of which we present three: off-axis scattering and reverberation.
 
- % A set of time-delayed (focused) transducer waves are called a beam.
-
-% Brightness mode, or B-mode, .
-%
-% \subsection{Neural-Network Methods}
-% Aperture Domain Model Image REconstruction (ADMIRE)\cite{admire2017}.
+% TODO: move scattering up?
+Underlying these two artifacts is the basic mechanism of ultrasound - scattering. Scattering describes the reflection of an acoustic wave as it encounters the boundary between matters of differing impedance. There are many scatters (boundaries) in the field of view. We assume that a wave scatters once before returning to the transducer array and that a transducer subarray emits a straight wave aimed linearly down (the area directly under is called a region of interest - ROI). However, these assumptions are not true in reality. For example, speckles are formed by interference among scattered waves which stray from the ROI. Even though speckles are not considered an artifact, there are other properties of scattering that are.
 
 
+\subsection{Off-Axis Scattering}
 
-% \subsection{Traditional Noise Suppression Methods}
-% \subsection{Machine Learning Noise Suppression Methods}
-% \subsection{Convolutional Neural Networks Methods}
+The first such artifact is off-axis scattering. We typically assume that pulse-waves propagate downward, but in reality, pulse waves exhibit diffraction when emitted by a transducer beam. The diffraction resembles the way sound travels. Using an analogy, when person A shouts a secret message facing person B, a bystander C can often hear the message as well (if less clearly). In ultrasound, this phenomenon can be illustrated by beam plots - the normalized far-field magnitude of the transmit pressure versus observation angle. The acoustic pressure we want to focus on is the mainlobe, and the sidelobes are the diffractions that dilute the energy and cause off-axis echos that degrade the image.
 
 
-\subsection{Solutions to Reduce Noise}
-\subsubsection{Traditional Methods}
-\subsubsection{Machine Learning Methods}
-\subsubsection{Deep Learning Methods}
+\subsection{Reverberation}
+
+Another cause of image degradation is reverberation or multipath scattering. We assume that when a wave encounters a boundary, it is reflected back to and only to the transducers. However, in reality, the scattered wave can travel in all directions. In addition, the divergent scattered waves can be further scattered by boundaries outside the ROI of the emitting beam. As a result of bouncing around in the field of view, the wave takes longer than expected to return to the same transducer. The multipath-scattered responses interference with the desired vertical responses from the ROI and degrades the resulting image.
+
+
+% TODO: Describe the Region of Interest (ROI) with a figure like Kaz's fig 1.9 (without the porcupine).
+
+\section{Noise Suppression Algorithms}
+
+Many algorithms have been developed to address ultrasound artifacts. Earlier methods include Tissue Harmonic Imaging, Time-Reversal Technique, Second-Order Ultrasound Field, Minimum-Variance Beamforming, PCA, SVD, and Short-Lag Spatial Coherence. These methods typically have a tradoff of a smaller field of view. Recently, statistical approaches have been proposed. One example is Aperture Domain Model Image REconstruction (ADMIRE) developed by Byram and Dei \cite{admire2017}. Machine learning approaches tend to work well, but they are too computationally demanding to be real-time, although progress has been made to improve its performance.
+
+In addition, studies have shown that deep neural networks are effective in suppressing noises. Of particular relevance is the application of multilayer perceptrons (MLPs) in the aperture domain or channel dimension \cite{luchies_tmi_2018}. Lastly, convolutional neural networks (CNNs) have also been used in biomedical imaging in general \cite{unet} and various ultrasound imaging modalities \cite{van_sloun_review}. In terms of ultrasound beamforming, work has been done using CNNs to learn the entire beamforming process \cite{hyun_uffc_2019}.
+
+% "Hyun et al. [44] propose deep convolutional neural networks for joint beamforming and speckle reduc- tion. Rather than applying the latter as a post-processing technique, it is embedded in the beamforming process itself, permitting exploitation of both channel and phase information that is otherwise irreversibly lost."
+
+
+% TODO introduce why the frequency domain.
+\section{Contribution} % Contribution
+The aim of this thesis is to investigate the effectiveness of convolutional neural networks (CNNs) in suppressing off-axis scattering and reverberation clutter. Particularly, I apply CNNs to signals in the aperture short-time Fourier transform (STFT) domain to avoid having to train for for different pulse shapes, depth dependent attenuation, and other pulse parameters that may vary across patients and even across probes as they age. I will discuss the rationale in detail in Chapter 2.
+
+\section{Organization}
+Chapter 2 discusses background on deep neural networks and related work on noise suppression with deep learning and CNN-based beamforming. Chapter 3 describes the training data generation process and signal grouping. Chapter 4 explains the CNN architectures and the training pipeline, including a random hyperparameter search technique. Chapter 5 details the beamforming pipeline for evaluation. Chapter 6 addresses the limitations of this work, discusses the results, and concludes the thesis with potential future work.
+
+% "A major aim of this dissertation is not only to investigate the model-based beamform- ing algorithm’s ability but to also identify its limitations in suppressing ultrasound acoustic clutter sources, including reverberation, off-axis scattering, wavefront aberration and gross sound speed mismatch. These sources of clutter produce image artifacts, degrading ultra- sound images. Based on the findings in the dissertation works, the proposed solutions to address the identified limitations are also reported. The dissertation is organized as follows.
+% Chapter 2 describes the ADMIRE algorithm and demonstrates preliminary studies to validate the accuracy of the ADMIRE model using simulation data. Model predictor error and model predictors’ correlation characteristics are assessed.
+% Chapter 3 evaluates the ADMIRE algorithm’s robustness in the presence of off-axis clutter and sound speed mismatch using simulation performed with Field II and experi- mental measurements from phantoms and in vivo data.
+% Chapter 4 studies the impact of ADMIRE performance to suppress acoustic clutter in the presence of phase aberration and reverberation. In order to accurately characterize aberrated signals of interest, an adaptive component is introduced to the ADMIRE model to account for wavefront aberration.
+% Chapter 5 extends ADMIRE evaluation from conventionally focused beam sequences to plane wave transmit sequencing, in conjunction with synthetic aperture focusing (SAF), to insonify a broad field of view. Additionally, this chapter investigates how robustly AD- MIRE performs in the presence of random white noise.
+% Chapter 6 addresses more computationally-efficient methods to implement ADMIRE with otherwise similar performance because ADMIRE is computationally expensive and its lengthy run-time impairs its usefulness. In this study, three different reduced model methods and other strategies to reduce complexity are evaluated.
+% Chapter 7 proposes contrast ratio dynamic range as a new quality metric. The pro- posed metric is applied to several beamformers, including DAS, two adaptively weighted beamforming methods, called coherence factor (CF) and minimum variance (MV), SLSC"
