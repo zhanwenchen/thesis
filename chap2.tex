@@ -1,45 +1,85 @@
 \chapter{Background}
 
 
-\section{Classic} % 2-3 pages
+\section{Classic Acoustic Clutter Suppression Algorithms} % 2-3 pages
 
-\section{Unsupervised} % 1-2 pages
+\subsection{Tissue Harmonic Imaging}
 
-PCA, SVD, ADMIRE
-
-
-
-\section{Neural Networks} % 5-6 pages.
-Supervised.
-
-\subsection{Convolutional Neural Networks}
-
-Convolutional Neural Networks (CNNs) have seen widespread applications in Computer Vision, Natural Language Processing, and Medical Imaging alike. By taking advantage of localized parameter sharing, CNNs require fewer parameters and thus reduce the risk of overfitting.
-
-LeNet was an influential CNN architecture for classifying images. It consisted of two convolutional layers followed by two fully-connected layers. Each convolutional layer was accompanied by a pooling layer for down-sampling. It was used to successfully recognize handwritten digits \cite{lenet}. % Figure ? shows the architecture and hyperparameters of the original AlexNet.
-
-AlexNet was another important architecture. Deeper than LeNet, it featured five convolutional layers. It was the first CNN to beat domain-specific methods to classify images in the ImageNet competition. To this day, AlexNet is still considered a reference architecture. % Figure ? and table ? illustrate the model and its hyperparameters.
-
-By applying CNNs to the same STFT data, we introduce convolution to the aperture dimension as well. CNNs could have the additional benefit of detecting local features such as aperture shapes. In addition, CNN beamformers, with fewer parameters, may be easier to train as shown in other application domains.
+One widely-used approach to address the issue of cluttered reverberation signals is tissue harmonic imaging (THI) \cite{christopher1997finite, ward1997nonlinear, averkiou1997nonlinear}. THI circumvents the problem inherent in typical ultrasound waves at a fundamental frequency ($f_{c}$) by using a higher frequency - a second harmonic frequency ($f_{hc}$). Because reverberation clutter primarily occurs at the fundamental frequency, reflected signals received at a second harmonic frequency are not subject to the same clutter. As a result, harmonic B-mode images have better quality with higher contrast, improved resolution, and less near-field artifact. However, the tradeoffs of higher frequency are higher attenuation\footnote{Attenuation is the loss of power (amplitude) as a wave travels through depth. In soft tissue, higher frequency exacerbates attenuation.} and lower amplitude. Higher attenuation and lower amplitude result in a loss in axial resolution \cite{muir1980prediction, starritt1986development, humphrey2000nonlinear, cobbold2006foundations, anvari2015primer}. The narrowed bandwidth reduces axial resolution \cite{whittingham1999tissue}, which measures how close two scatters are along the depth dimension. Axial resolution is a funtion of pulse length as well as transducer frequency.
 
 
-\subsection{CNNs in Denoising and Regression}
-Motivate why CNNs. Fully-connected layers in general. Why would they not be appropriate
+\subsection{Time-Reversal Technique}
+Time-reversal is another method for suppressing reverberation clutter. In this method, ultrasound waves are transmitted and received twice. After the initial transmit and receive, the signals are reversed and re-transmitted into the field of view. The retransmitted signals propagate back and refocus on the original source throughout the same medium, subject to the same reverberation. Noises present differently for each transmit (incoherent) but signals follow the same pattern (coherent). Due to constructive and destructive interference, the sum of original and the re-transmitted signals amplifies signal and reduces reverberation clutter. The limitation for this approach is the requirement for a point-like source in the medium as the focal region is difficult to determine \cite{dei_2019, fink1992time}.
 
-\subsection{CNN Architectures to address}
-U-Net is a segmentation problem. Fully-Convolutional Neural Networks. Bottlenecks.
+\subsection{Second-Order Ultrasound Field}
+
+% "Another promising clutter suppression imaging modality is second-order ultrasound
+% field (SURF), which was initially developed by Angelsen et al. [60, 61, 62, 63, 64, 65]. With this method, two transmitted pulses containing a low frequency (ranging from 0.2 to 1.2 MHz) and a high frequency (from 1.0 to 10 MHz) are used [62]. The low frequency pulse manipulates the material of medium (i.e., tissues) where the signals are propagating (called manipulation pulse), while the high frequency pulse is a signal used for imaging (called imaging pulse). One imaging pulse is positioned on a peak of the manipulate pulse and the other imaging pulse is on the bottom. The propagation speed of an imaging pulse is modified by a manipulation pulse. The co-propagating imaging pulses become distorted when the manipulation pulse shows non-linear effects. Due to the distortion of the manipulation pulse, a delay between the two imaging pulses is measured with depth. The imaging pulse, therefore, possesses information about the depth of the first scattering that occurred. Based on the information, the imaging pulse then masks multipath scattering, resulting in clutter suppression. The key concept of SURF is to utilize a dual-frequency band technique in which a conventional imaging pulse is manipulated by a lower frequency pulse [65]. SURF imaging shows potential to suppress reverberation clutter components. A possible problem with SURF imaging may be the existence of grating lobes produced when transmitting high frequency pulses. It may also require complex hardware and transducers because of the complicated pulse sequencing."
+
+\subsection{Short-Lag Spatial Coherence}
+
+% TODO: Ask Katie
+
+% "Recently, Lediju et al. introduced a novel clutter suppression algorithm, called short-lag spatial coherence (SLSC) imaging [66]. The approach of SLSC does not apply a conven- tional delay-and-sum (DAS), but measures the spatial coherence of received echoes to form ultrasound images. The idea of SLSC originated in the van Citter-Zernike theorem, which discussed the applicability of pulse echo measurement by Mallert and Fink [67]. The van Citter-Zernike theorem predicts the spatial coherence of backscattered signals in aperture domain, where the backscattered signals are recorded by individual aperture elements. For instance, the normalized spatial coherence as a function of the lateral lag or distance, l, can"
+%
+% "where Rˆ(l) is the normalized spatial coherence function, M is the total number of channel elements, the aperture domain signal received by the ith element is denoted by si(k), k is the discrete depth or time index, k2 − k1 is a correlation kernel size of one wavelength. The SLSC beamforming is integration of the spatial coherence function up to the first L lags in (1.9) [68, 66]."
+%
+% SLSC beamforming forms the spatial coherence-based images (not B-mode images) at
+% each depth k of each A-line. For SLSC imaging, L is typically the number of elements corresponding to 1-30\% of the transmit aperture [68].
+
+% \subsection{Generalized Coherence Factor}
+\subsection{Coherence Factor}
+
+
+\subsection{Minimum-Variance Beamforming}
+% TODO: maybe ask Adam?
+
+
+\section{Machine Learning-Based Acoustic Clutter Suppression Algorithms}
+
+\subsection{ADMIRE}
+
+Aperture Domain Model Image Reconstruction (ADMIRE) is a model-based approach to suppress off-axis scattering and reverberation clutter. It operates on frequency-domain channel data, decomposes the cluttered signal, selects the scatterer in the region of interest (ROI), and reconstructs the decluttered signal. It then uses regression to determine the coefficient for regularizing each component signal. ADMIRE proves highly effective in suppressing both off-axis scattering and reverberation clutter. However, the computational complexity inherent in this approach precludes real-time applications until further optimization increases the frame rate \cite{dei_2019, admire2015}.
+
+\subsection{Beamforming Through Regularized Inverse Problems in Ultrasound Medical Imaging}
+\cite{szasz_regularized_inverse}
+
+\section{Deep Learning-Based Acoustic Clutter Suppression Algorithm} % 5-6 pages.
+
+\subsection{Introduction to Neural Networks}
+
+Neural networks are machine learning models that learn by backpropagating loss. They are theoretically able to learn a broad set of complex functions by taking advantage of nonlinear activations \cite{rumelhart1985learning}. Convolutional Neural Networks (CNNs) are special neural networks that take advantage of localized parameter sharing and convolutions. CNNs require fewer parameters and thus have a reduced risk of overfitting. CNNs have seen widespread applications in Computer Vision, Natural Language Processing, and Medical Imaging alike. LeNet was an influential CNN architecture for classifying images. It consisted of two convolutional layers followed by two fully-connected layers. Each convolutional layer was accompanied by a pooling layer for down-sampling. It was used to successfully recognize handwritten digits \cite{lenet}.
+
+Training neural networks involves selecting training hyperparameters such as learning rate, dropout rate, and the width of fully-connected layers. Recent studies show that random search is more effective than grid search in finding the optimal neural network \cite{bergstra2012random}. Furthermore, as there are no established models for ultrasound beamforming, a random search for "hyperparameters" in model arhitecture, such as the kernel dimensions, the number of kernels, and the padding/stride dimensions for a convolutional layer is necessary.
+
+% \subsection{Random Hyperparameter Search}
+
+\subsection{Multi-Layer Perceptrons for Suppressing Off-Axis Scattering}
+
+Luchies and Byram proposed a neural-network approach to suppress off-axis scattering \cite{luchies_tmi_2018, training_improvements}. They trained multi-layer perceptrons (MLPs) that operated on the frequency domain to suppress the off-axis signals based on simulated point targets. They prove effective in improving contrast while preserving speckle patterns. This work motivates further exploration of convolutional neural networks on the same STFT-domain data, as there may be spatial features in the frequency domain that could be more effectively learned by CNNs.
+
+\subsection{Convolutional Neural Networks for Noise Reduction}
+
+Although no CNN-based approaches have been proposed for reducing off-axis scattering and reverberation clutter, there are related approaches for learning ultrasound reconstruction and speckle reduction. For example, Yoon et al. proposed a method that effectively interpolates missing sub-sampled RF data in 3D ultrasound \cite{yoon2018efficient}. Hyun et al. showed that fully-connected neural networks have the potential to learn the beamforming process \cite{hyun2019beamforming}, albeit with limited effectiveness.
+
+% \subsection{Convolutional Neural Networks for Noise Reduction}
+%
+%  % Figure ? shows the architecture and hyperparameters of the original AlexNet.
+%
+% AlexNet was another important architecture. Deeper than LeNet, it featured five convolutional layers. It was the first CNN to beat domain-specific methods to classify images in the ImageNet competition. To this day, AlexNet is still considered a reference architecture. % Figure ? and table ? illustrate the model and its hyperparameters.
+%
+% By applying CNNs to the same STFT data, we introduce convolution to the aperture dimension as well. CNNs could have the additional benefit of detecting local features such as aperture shapes. In addition, CNN beamformers, with fewer parameters, may be easier to train as shown in other application domains.
+
+
+% \subsection{CNNs in Denoising and Regression}
+% Motivate why CNNs. Fully-connected layers in general. Why would they not be appropriate
+
+% \subsection{CNN Architectures to address}
+% U-Net is a segmentation problem. Fully-Convolutional Neural Networks. Bottlenecks.
 
 % TODO: find cnns for denoising/regression.
 
-\subsection{Random Hyperparameter Search}
-
-
-Traditionally, grid-search has been used to find the hyperparameters for the best-performing neural network model. However, recent studies show that a random approach may be more effective [cite].
 
 
 
-
-% TODO: Move to methods.
-\subsection{Aperture Domain}
-
-Recently, deep neural networks have been used for ultrasound beamforming by our group [cite] and others [cite] [cite]. Our method applies deep neural network beamforming in the short-time Fourier transform (STFT) domain in order to avoid having to train for different pulse shapes, depth dependent attenuation, and other pulse parameters that may vary across patients and even across probes as they age. Our early approach used classic fully connected deep networks (FCNs) trained with synthetic data. These beamformers are convolutional in nature insofar as the networks, including their weights, are reused through depth; however, fully connected layers are used to span the aperture dimension. We demonstrated that these models could work well [cite].
+% Recently, deep neural networks have been used for ultrasound beamforming by our group [cite] and others [cite] [cite]. Our method applies deep neural network beamforming in the short-time Fourier transform (STFT) domain in order to avoid having to train for different pulse shapes, depth dependent attenuation, and other pulse parameters that may vary across patients and even across probes as they age. Our early approach used classic fully connected deep networks (FCNs) trained with synthetic data. These beamformers are convolutional in nature insofar as the networks, including their weights, are reused through depth; however, fully connected layers are used to span the aperture dimension. We demonstrated that these models could work well [cite].

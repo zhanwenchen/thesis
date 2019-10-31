@@ -4,3 +4,13 @@
 The MLP beamformer studied here was proposed previously by members of our group\cite{luchies_tmi_2018}. A collection of MLPs is trained to operate on channel data in the frequency domain. Training data was generated from Field II simulated point target responses \cite{field_ii}. The simulated ultrasonic array was based on the L7-4 (38 mm) linear array transducer. Point targets were randomly placed in an annular sector centered at the focal depth of the transducer array, using a process that we have described previously \cite{training_improvements}. For the point targets inside the main lobe of the beam, the corresponding output was the same as the input; for those outside the main lobe of the beam, the corresponding output was a vector of zeros [cite]. We used 105 examples for training and 104 for validation.
 
 % Figure 3 Scatterers were randomly placed along the annular sector as depicted. The acceptance region was taken as the region between the first nulls of a simulated beam. Question: Cite this figure? Not mine.
+
+
+% TODO: Move to methods.
+\subsection{STFT/Frequency Domain}
+
+Frequency-domain, not aperture domain. Minimum-variance by f. grant and jorgen jansen in frequency domain.
+
+STFT Domain. 1. Resilience changes in pulse shape. 2. we can do it in the complex data instead of hilbert (separation of components).
+
+Aperture domain is about channel data.
