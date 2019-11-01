@@ -18,14 +18,8 @@ Time-reversal is another method for suppressing reverberation clutter. In this m
 
 \subsection{Short-Lag Spatial Coherence}
 
-% TODO: Ask Katie
+Short-lag spatial coherence (SLSC) is a beamforming technique that takes advantage of the spatial similarity among the response waves across the aperture \cite{slsc}. In contrast to simply summing across the channels as is the case in delay-and-sum (DAS) beamforming, for each beam, SLSC measures the average correlation between all pairs of channels separated by \textit{l} ("lag") elements, for a given set of lags. The rationale behind this approach is that adjacent channel signals (short lags) are coherent spatially \footnote{Coherent means similar. Coherent waves have the same shape, albeit separated by a time delay. Coherence is a form of correlation or covariance between waves.}, but noises are incoherent. Weighted multiplication of waves would amplify the coherent components (the desired signals) and suppress the incoherent ones (the noises). As a result, the beaformed images show higher contrast, improved contrast-to-noise ratios, and better image texture \cite{dahl2017coherence}. The tradeoffs for these improvements include more computational complexity from additional matrix-based correlation derivation and loss in image resolution from only utilizing partial aperture information\cite{lediju2015resolution}.
 
-% "Recently, Lediju et al. introduced a novel clutter suppression algorithm, called short-lag spatial coherence (SLSC) imaging [66]. The approach of SLSC does not apply a conven- tional delay-and-sum (DAS), but measures the spatial coherence of received echoes to form ultrasound images. The idea of SLSC originated in the van Citter-Zernike theorem, which discussed the applicability of pulse echo measurement by Mallert and Fink [67]. The van Citter-Zernike theorem predicts the spatial coherence of backscattered signals in aperture domain, where the backscattered signals are recorded by individual aperture elements. For instance, the normalized spatial coherence as a function of the lateral lag or distance, l, can"
-%
-% "where Rˆ(l) is the normalized spatial coherence function, M is the total number of channel elements, the aperture domain signal received by the ith element is denoted by si(k), k is the discrete depth or time index, k2 − k1 is a correlation kernel size of one wavelength. The SLSC beamforming is integration of the spatial coherence function up to the first L lags in (1.9) [68, 66]."
-%
-% SLSC beamforming forms the spatial coherence-based images (not B-mode images) at
-% each depth k of each A-line. For SLSC imaging, L is typically the number of elements corresponding to 1-30\% of the transmit aperture [68].
 
 % \subsection{Generalized Coherence Factor}
 \subsection{Coherence Factor}
