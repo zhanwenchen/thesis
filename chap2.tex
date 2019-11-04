@@ -28,36 +28,22 @@
 
   \section{Deep Learning-Based Acoustic Clutter Suppression Algorithm} % 5-6 pages.
     \subsection{Introduction to Neural Networks}
-      Neural networks are machine learning models that learn by backpropagating loss. They are theoretically able to learn a broad set of complex functions by using nonlinear activations \cite{rumelhart1985learning}. Convolutional Neural Networks (CNNs) are special neural networks that taking advantage of localized parameter sharing and convolutions. CNNs require fewer parameters and thus have a reduced risk of overfitting. CNNs have seen widespread applications in Computer Vision, Natural Language Processing, and Medical Imaging alike. LeNet was an influential CNN architecture for classifying images. It consisted of two convolutional layers followed by two fully-connected layers. Each convolutional layer was accompanied by a pooling layer for down-sampling. It was used to successfully recognize handwritten digits \cite{lenet}.
+      Neural networks are machine learning models that learn by backpropagating loss. They are theoretically able to learn a broad set of complex functions by using nonlinear activations \cite{rumelhart1985learning}. Convolutional Neural Networks (CNNs) are special neural networks that taking advantage of localized parameter sharing and convolutions. CNNs require fewer parameters and thus have a reduced risk of overfitting. CNNs have seen widespread applications in Computer Vision, Natural Language Processing, and Medical Imaging alike. LeNet was an influential CNN architecture for classifying images. It consisted of two convolutional layers followed by two fully-connected layers. Each convolutional layer was accompanied by a pooling layer for down-sampling. It was able to successfully recognize handwritten digits \cite{lenet}.
 
-      Training neural networks involves selecting training hyperparameters such as learning rate, dropout rate, and the width of fully-connected layers. Recent studies show that random search is more effective than grid search in finding the optimal neural network \cite{bergstra2012random}. Furthermore, as there are no established models for ultrasound beamforming, a random search for "hyperparameters" in model arhitecture, such as the kernel dimensions, the number of kernels, and the padding/stride dimensions for a convolutional layer is necessary.
+    \subsection{CNN Architectures}
+      Fully-Convolutional Neural Networks was proposed by Long et al. in 2015 to perform image segmentation by pixel-wise classification \cite{long2015fcn}.
 
-% \subsection{Random Hyperparameter Search}
+      U-Net is a CNN architecture for biomedical image segmentation \cite{ronneberger2015unet}.
+
+      Another type of layer is the bottleneck layer, which is an intermediate layer that reduces the size of data coming from its previous layer. Bottleneck layers are used to obtain a (nonlinear) representation of the input with reduced dimensionality, i.e., dimension reduction. An example of a bottleneck layer is an autoencoder, which is used to reduce the previous output and is in turn used to generate an encoding that approximates the original input (hence "auto") \cite{ballard1987modular}. For example, the GoogLeNet architecture that won the ImageNet Large-Scale Visual Recognition Challenge 2014 (ILSVRC2014) featured 1 by 1 convolutional blocks (termed "network-in-networks" or NiNs) that reduce the number of features before the computationally expensive parallel blocks. \cite{szegedy2015going}.
+
+    \subsection{Convolutional Neural Networks for General Regression}
+
+    \subsection{Random Hyperparameter Search}
+      Training neural networks involves selecting training and model hyperparameters such as learning rate, dropout rate, and the width of fully-connected layers. Recent studies show that random search is more effective than grid search in finding the optimal neural network \cite{bergstra2012random}. Furthermore, as there are no established models for ultrasound beamforming, a random search for hyperparameters in model arhitecture, such as the kernel dimensions, the number of kernels, and the padding/stride dimensions for a convolutional layer is necessary.
 
     \subsection{Multi-Layer Perceptrons for Suppressing Off-Axis Scattering}
-      Luchies and Byram proposed a neural-network approach to suppress off-axis scattering \cite{luchies_tmi_2018, training_improvements}. They trained multi-layer perceptrons (MLPs) that operated in the frequency domain to suppress the off-axis signals based on simulated point targets. They prove effective in improving contrast while preserving speckle patterns. This work motivates further exploration of convolutional neural networks on the same STFT-domain data, as there may be spatial features in the frequency domain that could be more effectively learned by CNNs.
+      Recently, Luchies and Byram proposed a neural-network approach to suppress off-axis scattering \cite{luchies_tmi_2018, training_improvements}. They trained multi-layer perceptrons (MLPs) that operated in the short-time Fourier transform (STFT)\footnote{Frequency.} domain to suppress the off-axis signals based on simulated point targets. These beamformers are convolutional in nature insofar as the networks, including their weights, are reused through depth; however, fully connected layers are used to span the aperture dimension. This method proved effective in improving contrast while preserving speckle patterns. This work motivates further exploration of CNNs on the same STFT-domain data, as there may be spatial features in the frequency domain that could be more effectively learned by CNNs, such as aperture shapes. In addition, training in the STFT domain helps avoid having to train for experimental parameters such as different pulse shapes and depth dependent attenuation. % TODO: explain why avoids different pulse shapes and depth dependent attenuation
 
-    \subsection{Convolutional Neural Networks for Noise Reduction}
+    \subsection{Convolutional Neural Networks for Beamforming}
       Although no CNN-based approaches have been proposed for reducing off-axis scattering and reverberation clutter, there are related approaches for learning ultrasound reconstruction and speckle reduction. For example, Yoon et al. proposed a method that effectively interpolates missing sub-sampled RF data in 3D ultrasound \cite{yoon2018efficient}. Hyun et al. showed that fully-connected neural networks have the potential to learn the beamforming process \cite{hyun2019beamforming}, albeit with limited effectiveness.
-
-% \subsection{Convolutional Neural Networks for Noise Reduction}
-%
-%  % Figure ? shows the architecture and hyperparameters of the original AlexNet.
-%
-% AlexNet was another important architecture. Deeper than LeNet, it featured five convolutional layers. It was the first CNN to beat domain-specific methods to classify images in the ImageNet competition. To this day, AlexNet is still considered a reference architecture. % Figure ? and table ? illustrate the model and its hyperparameters.
-%
-% By applying CNNs to the same STFT data, we introduce convolution to the aperture dimension as well. CNNs could have the additional benefit of detecting local features such as aperture shapes. In addition, CNN beamformers, with fewer parameters, may be easier to train as shown in other application domains.
-
-
-% \subsection{CNNs in Denoising and Regression}
-% Motivate why CNNs. Fully-connected layers in general. Why would they not be appropriate
-
-% \subsection{CNN Architectures to address}
-% U-Net is a segmentation problem. Fully-Convolutional Neural Networks. Bottlenecks.
-
-% TODO: find cnns for denoising/regression.
-
-
-
-
-% Recently, deep neural networks have been used for ultrasound beamforming by our group [cite] and others [cite] [cite]. Our method applies deep neural network beamforming in the short-time Fourier transform (STFT) domain in order to avoid having to train for different pulse shapes, depth dependent attenuation, and other pulse parameters that may vary across patients and even across probes as they age. Our early approach used classic fully connected deep networks (FCNs) trained with synthetic data. These beamformers are convolutional in nature insofar as the networks, including their weights, are reused through depth; however, fully connected layers are used to span the aperture dimension. We demonstrated that these models could work well [cite].
