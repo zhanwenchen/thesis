@@ -18,32 +18,27 @@
     \subsection{Minimum-Variance Beamforming}
       Minimum variance (MV) beamforming is an approach to suppress off-axis scattering. It does so by minimizing the power (the zero-mean variance) of off-axis regions, while preserving the power of the target region (a point location) \cite{synnevag2007adaptive, holfort2009broadband}. MV has proven effective in improving contrast in phantom targets. The drawback of MV is its sensitivity to the dB variation from inside the focal region. In addition, the image quality improvements do not translate to \textit{in vivo} images. %TODO find citatations for pros and cons.
 
-\section{Machine Learning-Based Acoustic Clutter Suppression Algorithms}
+  \section{Machine Learning-Based Acoustic Clutter Suppression Algorithms}
+    \subsection{ADMIRE}
 
-\subsection{ADMIRE}
+      Aperture Domain Model Image Reconstruction (ADMIRE) is a model-based approach to suppress both off-axis scattering and reverberation clutter. It operates on frequency-domain channel data, decomposes the cluttered signal, selects the scatterer in the region of interest (ROI), and reconstructs the decluttered signal. It then uses regression to determine the coefficient for regularizing each component signal. ADMIRE proves highly effective in suppressing both off-axis scattering and reverberation clutter. However, the computational complexity inherent in this approach precludes real-time applications until further optimization can increase the frame rate \cite{dei_thesis, admire2015}.
 
-Aperture Domain Model Image Reconstruction (ADMIRE) is a model-based approach to suppress off-axis scattering and reverberation clutter. It operates on frequency-domain channel data, decomposes the cluttered signal, selects the scatterer in the region of interest (ROI), and reconstructs the decluttered signal. It then uses regression to determine the coefficient for regularizing each component signal. ADMIRE proves highly effective in suppressing both off-axis scattering and reverberation clutter. However, the computational complexity inherent in this approach precludes real-time applications until further optimization increases the frame rate \cite{dei_thesis, admire2015}.
+    \subsection{Regularized Inverse}
+      Another machine learning-based approach is regularized inverse, or least squares (LS) beamforming. Given the steering angles\footnote{Steering angles are the directions of transducer elements in a beam such that the elements form a curved wavefront for focused imaging. They are closely related to time delays.} \textit{a priori}, this approach modeled each scanline\footnote{A scanline in a beam, at a particular depth, consists of signals across the aperture.} in the DAS beamformed RF data as a function of the scatterer's peak signal (desired), the given steering matrix, and a Gaussian error term. Stacking the per-depth least squares solutions to the model, the LS approach produces images with improved contrast-to-noise ratios (CNR) \cite{szasz_regularized_inverse}. % TODO: cons?
 
-\subsection{Beamforming Through Regularized Inverse Problems in Ultrasound Medical Imaging}
-\cite{szasz_regularized_inverse}
+  \section{Deep Learning-Based Acoustic Clutter Suppression Algorithm} % 5-6 pages.
+    \subsection{Introduction to Neural Networks}
+      Neural networks are machine learning models that learn by backpropagating loss. They are theoretically able to learn a broad set of complex functions by using nonlinear activations \cite{rumelhart1985learning}. Convolutional Neural Networks (CNNs) are special neural networks that taking advantage of localized parameter sharing and convolutions. CNNs require fewer parameters and thus have a reduced risk of overfitting. CNNs have seen widespread applications in Computer Vision, Natural Language Processing, and Medical Imaging alike. LeNet was an influential CNN architecture for classifying images. It consisted of two convolutional layers followed by two fully-connected layers. Each convolutional layer was accompanied by a pooling layer for down-sampling. It was used to successfully recognize handwritten digits \cite{lenet}.
 
-\section{Deep Learning-Based Acoustic Clutter Suppression Algorithm} % 5-6 pages.
-
-\subsection{Introduction to Neural Networks}
-
-Neural networks are machine learning models that learn by backpropagating loss. They are theoretically able to learn a broad set of complex functions by taking advantage of nonlinear activations \cite{rumelhart1985learning}. Convolutional Neural Networks (CNNs) are special neural networks that take advantage of localized parameter sharing and convolutions. CNNs require fewer parameters and thus have a reduced risk of overfitting. CNNs have seen widespread applications in Computer Vision, Natural Language Processing, and Medical Imaging alike. LeNet was an influential CNN architecture for classifying images. It consisted of two convolutional layers followed by two fully-connected layers. Each convolutional layer was accompanied by a pooling layer for down-sampling. It was used to successfully recognize handwritten digits \cite{lenet}.
-
-Training neural networks involves selecting training hyperparameters such as learning rate, dropout rate, and the width of fully-connected layers. Recent studies show that random search is more effective than grid search in finding the optimal neural network \cite{bergstra2012random}. Furthermore, as there are no established models for ultrasound beamforming, a random search for "hyperparameters" in model arhitecture, such as the kernel dimensions, the number of kernels, and the padding/stride dimensions for a convolutional layer is necessary.
+      Training neural networks involves selecting training hyperparameters such as learning rate, dropout rate, and the width of fully-connected layers. Recent studies show that random search is more effective than grid search in finding the optimal neural network \cite{bergstra2012random}. Furthermore, as there are no established models for ultrasound beamforming, a random search for "hyperparameters" in model arhitecture, such as the kernel dimensions, the number of kernels, and the padding/stride dimensions for a convolutional layer is necessary.
 
 % \subsection{Random Hyperparameter Search}
 
-\subsection{Multi-Layer Perceptrons for Suppressing Off-Axis Scattering}
+    \subsection{Multi-Layer Perceptrons for Suppressing Off-Axis Scattering}
+      Luchies and Byram proposed a neural-network approach to suppress off-axis scattering \cite{luchies_tmi_2018, training_improvements}. They trained multi-layer perceptrons (MLPs) that operated in the frequency domain to suppress the off-axis signals based on simulated point targets. They prove effective in improving contrast while preserving speckle patterns. This work motivates further exploration of convolutional neural networks on the same STFT-domain data, as there may be spatial features in the frequency domain that could be more effectively learned by CNNs.
 
-Luchies and Byram proposed a neural-network approach to suppress off-axis scattering \cite{luchies_tmi_2018, training_improvements}. They trained multi-layer perceptrons (MLPs) that operated on the frequency domain to suppress the off-axis signals based on simulated point targets. They prove effective in improving contrast while preserving speckle patterns. This work motivates further exploration of convolutional neural networks on the same STFT-domain data, as there may be spatial features in the frequency domain that could be more effectively learned by CNNs.
-
-\subsection{Convolutional Neural Networks for Noise Reduction}
-
-Although no CNN-based approaches have been proposed for reducing off-axis scattering and reverberation clutter, there are related approaches for learning ultrasound reconstruction and speckle reduction. For example, Yoon et al. proposed a method that effectively interpolates missing sub-sampled RF data in 3D ultrasound \cite{yoon2018efficient}. Hyun et al. showed that fully-connected neural networks have the potential to learn the beamforming process \cite{hyun2019beamforming}, albeit with limited effectiveness.
+    \subsection{Convolutional Neural Networks for Noise Reduction}
+      Although no CNN-based approaches have been proposed for reducing off-axis scattering and reverberation clutter, there are related approaches for learning ultrasound reconstruction and speckle reduction. For example, Yoon et al. proposed a method that effectively interpolates missing sub-sampled RF data in 3D ultrasound \cite{yoon2018efficient}. Hyun et al. showed that fully-connected neural networks have the potential to learn the beamforming process \cite{hyun2019beamforming}, albeit with limited effectiveness.
 
 % \subsection{Convolutional Neural Networks for Noise Reduction}
 %
