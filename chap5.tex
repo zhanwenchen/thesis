@@ -1,0 +1,28 @@
+\chapter{Discussion}
+
+\section{Challenges to Learning}
+
+  \subsection{Learning and Inference Domain Mismatch}
+  One challenge present in this study is the mismatch between the training data and the test data. The training data is inherently not beamformable into images as they are simulated point target responses rather than complete scan or simulated targets. Our evaluation dataset, including the phantom dataset and the \textit{in vivo} dataset are of specific targets and are beamformable into images.
+
+  \subsection{Training Objective Mismatch}
+  Another challenge to solving the denoising task is a mismatch between the machine learning domain and the inference domain. In our task, the training and validation in the machine learning process is in the STFT domain; the machine learning learning objective is minimizing the mean-squared-error (MSE) or Smooth Mean Absolute Error (SmoothL1) loss between the simulated STFT input and the simulated STFT target signals. However, the inference domain is in the image domain. We conduct model selection not by their loss curves, but by the beamformed image metrics and the qualitative assessment of resulting images. In other words, loss is not correlated with model performance.
+
+  % TODO: Is this necessary
+  % \subsection{Data Modes}
+  % The data has three modes. We are having the neural network to learn to 1. distinguish them, and 2. output values.
+
+
+\section{The Role of Convolution}
+Compared to the earlier LeNet-like and AlexNet-like architectures which feature both convolutional layers and fully-connected ones, the FCNs do not perform as well even though they still improve upon the benchmark DAS results. I investigate two possible reasons. First of all, the decrease in performance could be due to the decrease in the total number of weights. In other words, the CNR could be a function of the total number of weights in the model. The number of weights for the best-performing FCN is 1.64E4, which lower than that of the best-performing LeNet at 1.33E5, and more so compared with the best-performing MLP with 4.60E6. To study this, we vary the number of convolutional layers in the model to increase the number of kernels and the number of weights in the FCN, respectively. (Pending results)
+
+Another possible reason for the decrease in top performance is the ineffectiveness of convolution in this task. The improvement over the benchmark could be due to the fact that convolutions may be approximating full connections by having a larget receptive field - the recursive spatial dependency of the output layer on the input layer - that covers the input. Two mechanisms could contribute to this phenomenon. The first is the increase in kernel size. With a big enough convolutional kernel, the convolution sweep no longer occurs as intended. For example, for a 1D input of length 130, a convolutional kernel size of 130 would not be able to slide across the input (without padding), but a smaller kernel of length 5 would be able to slide 125 times at a stride of 1. The former caes is no different from a full connection.
+
+To test this hypothesis, we fixed other network and training hyperparameters, constrained all layers to have the same kernel size (but relaxing the padding in order to preserve the output resolution), and varied the kernel size. (Pending complete results)
+
+Another possible mechanism is the increase in the receptive field is an increase in the number of convolutional layers. Because each layer recursively depends on the convolution of the previous layer, the output layer of a deep enough fully-convolutional neural network will recursively depend on all elements in the input, effectively making the neural network a fully-connected one. In order to study the influence of a larger receptive field outweighs any potential learnable convolutional feature, we constrain our network to have the same output resolution after each layer and vary the number of convolutional layers. (Pending results)
+
+
+
+% TODO: waiting for MLP
+% \section{Bottleneck and Feature Representation with MLP}
