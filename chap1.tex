@@ -9,18 +9,15 @@
 
  Ultrasound imaging consists of three steps: emitting sound waves (transmit), receiving echoes (receive), and interpreting those responses to form an image. The transmit step is achieved with ultrasonic transducers - devices that convert electricity into ultrasound waves or vice versa. These same transducers are utilized to receive ultrasonic echoes.
 
- In practice, ultrasound scans are acquired with an array of transducers and each transducer element's pulse transmission is preciously timed by a computer. % Because a single transducer element is only able to capture a single depth-dimension signal, a (horizontal) stack of such transducers can introduce the lateral (space) dimension.
-
- The most basic case of ultrasound imaging is plane wave imaging, where all transducers in an array emit the same acoustic pulses at the same time, forming a flat wavefront. After the transmit event, the waves propagate the field of view and are scattered back to the transducers as pulse-echo responses.
+ In practice, ultrasound scans are acquired with an array of transducer elements and each transducer element's pulse transmission is preciously timed by a computer. The most basic case of ultrasound imaging is plane wave imaging, where all elements in an array transducer emit the same acoustic pulses at the same time, forming a flat wavefront. After the transmit event, the waves propagate the field of view and are scattered back to the transducers as pulse-echo responses.
 
 
  % Channel data per transducer is radio frequency (RF) data (measured in time) for each depth. EXPLAIN??????? I thought it was acoustic energy???? What's actually in it?
 
- In the case of plane wave imaging, each transducer element samples its measured acoustic pressure at each timestep within a small time window. The distance to an object is then calculated as
+ The distance to an object is then calculated as
  $$depth = \frac{sound\,speed * time}{2}$$ % what about depth = t / fs * c /2?
  , accounting for both directions of travel. With this relationship, the time dimension can be translated to the distance or the depth dimension during the processing step. Thus, each transducer has a series of electric signals $v$ for each depth, $y$. With a horizontal or lateral series of $x$ transducers, we have a 2D matrix with each value $v = V[x, y]$ representing the electircal energy (in volts or V) measured by the $x$th transducer element at time $t$. The log-compressed and normalized envelope\footnote{footnotes explaining log compressed envelope w.r.t. dB} of this matrix, with its unit in decibels (dB), becomes an image of width $x$ and height $y$, where each pixel represents the relative intensity in the dynamic range of measured acoustic energy. A typical dynamic range is 60dB. This image modality is called brightness mode, or B-mode. % The lateral dimension may be distinct from the number of transducer elements in cases of horizontal interpolation to increase lateral resolution.
 
- % If the scanned object has no variation in acoustic impedance (for example, water, air), the flat wavefront sent out will return at the same timesteps, because all waves encounter the same level of resistence. Scanning pure water or air with plane waves produces a blank image because the intensity is the same. Waves diffract.
  Ultrasound relies on scattered waves (echoes) which only occur at surfaces between varying acoustic impedance. Conversely, if the field of view contains a single, even medium such as air, no signal is returned to the transducers.
 
  Now consider the nontrivial example of plane wave imaging of a phantom, which is an artificial composite of materials of various shapes and acoustic impedance. As is the case previously, all elements emit the same pulse at the same timesteps. However, as each pulse wave travels through the composite, it encounters varying impedance, and some of the wave energy gets scattered at various points in depth and at various degrees, depending on the location and the impedance of the component matrials. The returning signals that result from this scattering are used to form a tomographic view of the phantom.
@@ -38,6 +35,7 @@
 
 \section{Challenges in Ultrasound Beamforming}
 
+% TODO: Li 2016 visualization has sources of reverb.
 Although widely accepted, DAS beamforming is not an ideal method for clinical application due to the presence of many noises or artifacts, of which we present two: off-axis scattering and reverberation.
 
 % TODO: move scattering up?
@@ -75,11 +73,3 @@ The aim of this thesis is to investigate the effectiveness of convolutional neur
 
 \section{Organization}
 Chapter 2 discusses background on deep neural networks and related work on noise suppression with deep learning and CNN-based beamforming. Chapter 3 describes the training data generation process and signal grouping. Chapter 4 explains the CNN architectures and the training pipeline, including a random hyperparameter search technique. Chapter 5 details the beamforming pipeline for evaluation. Chapter 6 addresses the limitations of this work, discusses the results, and concludes the thesis with potential future work.
-
-% "A major aim of this dissertation is not only to investigate the model-based beamform- ing algorithm’s ability but to also identify its limitations in suppressing ultrasound acoustic clutter sources, including reverberation, off-axis scattering, wavefront aberration and gross sound speed mismatch. These sources of clutter produce image artifacts, degrading ultra- sound images. Based on the findings in the dissertation works, the proposed solutions to address the identified limitations are also reported. The dissertation is organized as follows.
-% Chapter 2 describes the ADMIRE algorithm and demonstrates preliminary studies to validate the accuracy of the ADMIRE model using simulation data. Model predictor error and model predictors’ correlation characteristics are assessed.
-% Chapter 3 evaluates the ADMIRE algorithm’s robustness in the presence of off-axis clutter and sound speed mismatch using simulation performed with Field II and experi- mental measurements from phantoms and in vivo data.
-% Chapter 4 studies the impact of ADMIRE performance to suppress acoustic clutter in the presence of phase aberration and reverberation. In order to accurately characterize aberrated signals of interest, an adaptive component is introduced to the ADMIRE model to account for wavefront aberration.
-% Chapter 5 extends ADMIRE evaluation from conventionally focused beam sequences to plane wave transmit sequencing, in conjunction with synthetic aperture focusing (SAF), to insonify a broad field of view. Additionally, this chapter investigates how robustly AD- MIRE performs in the presence of random white noise.
-% Chapter 6 addresses more computationally-efficient methods to implement ADMIRE with otherwise similar performance because ADMIRE is computationally expensive and its lengthy run-time impairs its usefulness. In this study, three different reduced model methods and other strategies to reduce complexity are evaluated.
-% Chapter 7 proposes contrast ratio dynamic range as a new quality metric. The pro- posed metric is applied to several beamformers, including DAS, two adaptively weighted beamforming methods, called coherence factor (CF) and minimum variance (MV), SLSC"
