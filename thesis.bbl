@@ -18,106 +18,94 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
-    \entry{admire2017}{inproceedings}{}
-      \name{author}{1}{}{%
-        {{hash=03856dec85cc7d88637d52c886325355}{%
-           family={{Byram}},
-           familyi={B\bibinitperiod},
-           given={B.},
-           giveni={B\bibinitperiod}}}%
-      }
-      \strng{namehash}{03856dec85cc7d88637d52c886325355}
-      \strng{fullhash}{03856dec85cc7d88637d52c886325355}
-      \strng{bibnamehash}{03856dec85cc7d88637d52c886325355}
-      \strng{authorbibnamehash}{03856dec85cc7d88637d52c886325355}
-      \strng{authornamehash}{03856dec85cc7d88637d52c886325355}
-      \strng{authorfullhash}{03856dec85cc7d88637d52c886325355}
-      \field{sortinit}{B}
-      \field{sortinithash}{276475738cc058478c1677046f857703}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}
-      \field{month}{3}
-      \field{title}{Aperture Domain Model Image REconstruction (ADMIRE) for improved ultrasound imaging}
-      \field{year}{2017}
-      \field{pages}{6250\bibrangedash 6253}
-      \range{pages}{4}
-      \verb{doi}
-      \verb 10.1109/ICASSP.2017.7953358
-      \endverb
-      \keyw{array signal processing;image reconstruction;medical image processing;ultrasonic imaging;aperture domain model image reconstruction;ADMIRE;improved ultrasound imaging;clinical ultrasound;MVDR beamformer;image quality improvement;low-quality images;Clutter;Ultrasonic imaging;Acoustics;Adaptation models;Array signal processing;Scattering;Delays;Ultrasound;Beamforming;Clutter;Reverberation;Model}
-    \endentry
-    \entry{hyun_uffc_2019}{article}{}
+  \datalist[entry]{none/global//global/global}
+    \entry{slsc}{article}{}
       \name{author}{4}{}{%
-        {{hash=08bd9c6b2db827aac14273f0e5755216}{%
-           family={{Hyun}},
-           familyi={H\bibinitperiod},
-           given={D.},
-           giveni={D\bibinitperiod}}}%
-        {{hash=902f706abb70dc07121d61bafc88212b}{%
-           family={{Brickson}},
-           familyi={B\bibinitperiod},
-           given={L.\bibnamedelimi L.},
-           giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=1e3d5548f76c58750ff15dd7d2babb36}{%
-           family={{Looby}},
+        {{hash=4b89794c6db3cdf10aa3ed083fd7b634}{%
+           family={Lediju},
            familyi={L\bibinitperiod},
-           given={K.\bibnamedelimi T.},
-           giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
-        {{hash=fd63867ebdcb236ea8399ef4eb059e1d}{%
-           family={{Dahl}},
+           given={Muyinatu\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f9453d417592d7a090d08cd92c5e4d87}{%
+           family={Trahey},
+           familyi={T\bibinitperiod},
+           given={Gregg\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=7a7d6b439e5b22bd6e3b07a9562deadb}{%
+           family={Byram},
+           familyi={B\bibinitperiod},
+           given={Brett\bibnamedelima C},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=0fe16e7ac18d189c2169f4270504331a}{%
+           family={Dahl},
            familyi={D\bibinitperiod},
-           given={J.\bibnamedelimi J.},
+           given={Jeremy\bibnamedelima J},
            giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
       }
-      \strng{namehash}{39575ecc5e6059292ba5e71844da0c68}
-      \strng{fullhash}{ad9051595bf11162debee1418f810ba3}
-      \strng{bibnamehash}{39575ecc5e6059292ba5e71844da0c68}
-      \strng{authorbibnamehash}{39575ecc5e6059292ba5e71844da0c68}
-      \strng{authornamehash}{39575ecc5e6059292ba5e71844da0c68}
-      \strng{authorfullhash}{ad9051595bf11162debee1418f810ba3}
-      \field{sortinit}{H}
-      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control}
-      \field{month}{5}
-      \field{number}{5}
-      \field{title}{Beamforming and Speckle Reduction Using Neural Networks}
-      \field{volume}{66}
-      \field{year}{2019}
-      \field{pages}{898\bibrangedash 910}
-      \range{pages}{13}
-      \verb{doi}
-      \verb 10.1109/TUFFC.2019.2903795
-      \endverb
-      \keyw{array signal processing;biomedical ultrasonics;convolutional neural nets;filtering theory;image denoising;image reconstruction;image resolution;learning (artificial intelligence);medical image processing;phantoms;speckle;ultrasonic imaging;real-world imaging;reduced speckle;traditional beamforming methods;ultrasound B-mode images;speckle noise;ultrasound channel signals;speckle-reduced B-mode images;log-domain normalization-independent loss functions;ultrasound imaging;fully convolutional neural network;simulated channel signals;training performance;network depth;network width;widest networks;normalization-independent mixture;multiscale structural similarity losses;ultrasound B-mode image reconstruction;machine-learned neural networks;speckle reduction techniques;beamformed subaperture radio frequency signals;B;Speckle;Imaging;Array signal processing;Ultrasonic imaging;Neural networks;Image reconstruction;Acoustics;Amplitude estimation;neural networks;signal denoising;supervised learning;ultrasonic imaging}
-    \endentry
-    \entry{field_ii}{inproceedings}{}
-      \name{author}{1}{}{%
-        {{hash=cc2e6ca98f1c5480631bb69351af4157}{%
-           family={Jensen},
-           familyi={J\bibinitperiod},
-           given={J.A.},
-           giveni={J\bibinitperiod}}}%
+      \list{publisher}{1}{%
+        {IEEE}%
       }
-      \strng{namehash}{cc2e6ca98f1c5480631bb69351af4157}
-      \strng{fullhash}{cc2e6ca98f1c5480631bb69351af4157}
-      \strng{bibnamehash}{cc2e6ca98f1c5480631bb69351af4157}
-      \strng{authorbibnamehash}{cc2e6ca98f1c5480631bb69351af4157}
-      \strng{authornamehash}{cc2e6ca98f1c5480631bb69351af4157}
-      \strng{authorfullhash}{cc2e6ca98f1c5480631bb69351af4157}
-      \field{sortinit}{J}
-      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \strng{namehash}{20c2212dfacff922610f323665068cc9}
+      \strng{fullhash}{9a6d5458d29af164d47859f83144f0b4}
+      \strng{bibnamehash}{20c2212dfacff922610f323665068cc9}
+      \strng{authorbibnamehash}{20c2212dfacff922610f323665068cc9}
+      \strng{authornamehash}{20c2212dfacff922610f323665068cc9}
+      \strng{authorfullhash}{9a6d5458d29af164d47859f83144f0b4}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{10th Nordic-Baltic Conference on Biomedical Imaging Published in Medical \& Biological Engineering \& Computing}
-      \field{title}{Field: A Program for Simulating Ultrasound Systems}
-      \field{volume}{34}
-      \field{year}{1996}
-      \field{pages}{351\bibrangedash 353}
-      \range{pages}{3}
+      \field{journaltitle}{IEEE transactions on ultrasonics, ferroelectrics, and frequency control}
+      \field{number}{7}
+      \field{title}{Short-lag spatial coherence of backscattered echoes: Imaging characteristics}
+      \field{volume}{58}
+      \field{year}{2011}
+      \field{pages}{1377\bibrangedash 1388}
+      \range{pages}{12}
+    \endentry
+    \entry{admire2015}{article}{}
+      \name{author}{4}{}{%
+        {{hash=ddf78c57bbfa600fc433224bfed40638}{%
+           family={Byram},
+           familyi={B\bibinitperiod},
+           given={Brett},
+           giveni={B\bibinitperiod}}}%
+        {{hash=64232ad6c3b7c02c86f0943ebb3d27ec}{%
+           family={Dei},
+           familyi={D\bibinitperiod},
+           given={Kazuyuki},
+           giveni={K\bibinitperiod}}}%
+        {{hash=63a1523c1731b20872d389263f93934a}{%
+           family={Tierney},
+           familyi={T\bibinitperiod},
+           given={Jaime},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0dec4b32b7077c238db9813ca343f7b3}{%
+           family={Dumont},
+           familyi={D\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{03c3d1b2352dab5d7c0e7299a248a6ef}
+      \strng{fullhash}{bb2ab9647e954af13ae970893bf3364f}
+      \strng{bibnamehash}{03c3d1b2352dab5d7c0e7299a248a6ef}
+      \strng{authorbibnamehash}{03c3d1b2352dab5d7c0e7299a248a6ef}
+      \strng{authornamehash}{03c3d1b2352dab5d7c0e7299a248a6ef}
+      \strng{authorfullhash}{bb2ab9647e954af13ae970893bf3364f}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on ultrasonics, ferroelectrics, and frequency control}
+      \field{number}{11}
+      \field{title}{A model and regularization scheme for ultrasonic beamforming clutter reduction}
+      \field{volume}{62}
+      \field{year}{2015}
+      \field{pages}{1913\bibrangedash 1927}
+      \range{pages}{15}
     \endentry
     \entry{luchies_tmi_2018}{article}{}
       \name{author}{2}{}{%
@@ -138,8 +126,8 @@
       \strng{authorbibnamehash}{368fca9999445407eb72c7885d038781}
       \strng{authornamehash}{368fca9999445407eb72c7885d038781}
       \strng{authorfullhash}{368fca9999445407eb72c7885d038781}
-      \field{sortinit}{L}
-      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Medical Imaging}
@@ -182,8 +170,8 @@
       \strng{authorbibnamehash}{f23ccc5160c62c7866172335b2c76e11}
       \strng{authornamehash}{f23ccc5160c62c7866172335b2c76e11}
       \strng{authorfullhash}{f23ccc5160c62c7866172335b2c76e11}
-      \field{sortinit}{R}
-      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{International Conference on Medical image computing and computer-assisted intervention}
@@ -216,8 +204,8 @@
       \strng{authorbibnamehash}{451b9c23bdf285c7c9974cea402f8b40}
       \strng{authornamehash}{451b9c23bdf285c7c9974cea402f8b40}
       \strng{authorfullhash}{451b9c23bdf285c7c9974cea402f8b40}
-      \field{sortinit}{v}
-      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the IEEE}
@@ -229,6 +217,1279 @@
       \verb 10.1109/JPROC.2019.2932116
       \endverb
       \keyw{Imaging;Ultrasonic imaging;Doppler effect;Deep learning;Array signal processing;Image resolution;Clutter;Beamforming;compression;deep learning;deep unfolding;Doppler;image reconstruction;super resolution;ultrasound imaging.}
+    \endentry
+    \entry{hyun_uffc_2019}{article}{}
+      \name{author}{4}{}{%
+        {{hash=08bd9c6b2db827aac14273f0e5755216}{%
+           family={{Hyun}},
+           familyi={H\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=902f706abb70dc07121d61bafc88212b}{%
+           family={{Brickson}},
+           familyi={B\bibinitperiod},
+           given={L.\bibnamedelimi L.},
+           giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=1e3d5548f76c58750ff15dd7d2babb36}{%
+           family={{Looby}},
+           familyi={L\bibinitperiod},
+           given={K.\bibnamedelimi T.},
+           giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=fd63867ebdcb236ea8399ef4eb059e1d}{%
+           family={{Dahl}},
+           familyi={D\bibinitperiod},
+           given={J.\bibnamedelimi J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{39575ecc5e6059292ba5e71844da0c68}
+      \strng{fullhash}{ad9051595bf11162debee1418f810ba3}
+      \strng{bibnamehash}{39575ecc5e6059292ba5e71844da0c68}
+      \strng{authorbibnamehash}{39575ecc5e6059292ba5e71844da0c68}
+      \strng{authornamehash}{39575ecc5e6059292ba5e71844da0c68}
+      \strng{authorfullhash}{ad9051595bf11162debee1418f810ba3}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{Beamforming and Speckle Reduction Using Neural Networks}
+      \field{volume}{66}
+      \field{year}{2019}
+      \field{pages}{898\bibrangedash 910}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/TUFFC.2019.2903795
+      \endverb
+      \keyw{array signal processing;biomedical ultrasonics;convolutional neural nets;filtering theory;image denoising;image reconstruction;image resolution;learning (artificial intelligence);medical image processing;phantoms;speckle;ultrasonic imaging;real-world imaging;reduced speckle;traditional beamforming methods;ultrasound B-mode images;speckle noise;ultrasound channel signals;speckle-reduced B-mode images;log-domain normalization-independent loss functions;ultrasound imaging;fully convolutional neural network;simulated channel signals;training performance;network depth;network width;widest networks;normalization-independent mixture;multiscale structural similarity losses;ultrasound B-mode image reconstruction;machine-learned neural networks;speckle reduction techniques;beamformed subaperture radio frequency signals;B;Speckle;Imaging;Array signal processing;Ultrasonic imaging;Neural networks;Image reconstruction;Acoustics;Amplitude estimation;neural networks;signal denoising;supervised learning;ultrasonic imaging}
+    \endentry
+    \entry{christopher1997finite}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2e8f87cc9481abed4a9530b5085df37c}{%
+           family={Christopher},
+           familyi={C\bibinitperiod},
+           given={Ted},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{2e8f87cc9481abed4a9530b5085df37c}
+      \strng{fullhash}{2e8f87cc9481abed4a9530b5085df37c}
+      \strng{bibnamehash}{2e8f87cc9481abed4a9530b5085df37c}
+      \strng{authorbibnamehash}{2e8f87cc9481abed4a9530b5085df37c}
+      \strng{authornamehash}{2e8f87cc9481abed4a9530b5085df37c}
+      \strng{authorfullhash}{2e8f87cc9481abed4a9530b5085df37c}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on ultrasonics, ferroelectrics, and frequency control}
+      \field{number}{1}
+      \field{title}{Finite amplitude distortion-based inhomogeneous pulse echo ultrasonic imaging}
+      \field{volume}{44}
+      \field{year}{1997}
+      \field{pages}{125\bibrangedash 139}
+      \range{pages}{15}
+    \endentry
+    \entry{ward1997nonlinear}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ac608d48d96635512bf3fe9ff5e51f10}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=00d588419aeee5086f24c29048b27fa4}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={A.\bibnamedelimi C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=04e42015941a861788b0dba8a6deb552}{%
+           family={Humphrey},
+           familyi={H\bibinitperiod},
+           given={V.\bibnamedelimi F.},
+           giveni={V\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{47335fe66acfd628f05ccb8d93f2f12d}
+      \strng{fullhash}{47335fe66acfd628f05ccb8d93f2f12d}
+      \strng{bibnamehash}{47335fe66acfd628f05ccb8d93f2f12d}
+      \strng{authorbibnamehash}{47335fe66acfd628f05ccb8d93f2f12d}
+      \strng{authornamehash}{47335fe66acfd628f05ccb8d93f2f12d}
+      \strng{authorfullhash}{47335fe66acfd628f05ccb8d93f2f12d}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of the Acoustical Society of America}
+      \field{number}{1}
+      \field{title}{Nonlinear propagation applied to the improvement of resolution in diagnostic medical ultrasound}
+      \field{volume}{101}
+      \field{year}{1997}
+      \field{pages}{143\bibrangedash 154}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1121/1.417977
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1121/1.417977
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1121/1.417977
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1121/1.417977
+      \endverb
+    \endentry
+    \entry{averkiou1997nonlinear}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=1939888cfbe8229434a64ba8f238a002}{%
+           family={{Averkiou}},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=728c8445ffcf9e059fd953892f4c5a0f}{%
+           family={{Roundhill}},
+           familyi={R\bibinitperiod},
+           given={D.\bibnamedelimi N.},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=e6bd48e531ec3a2166f36aed70b02f60}{%
+           family={{Powers}},
+           familyi={P\bibinitperiod},
+           given={J.\bibnamedelimi E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{215fbc026ef5947cf60cdca71f823644}
+      \strng{fullhash}{215fbc026ef5947cf60cdca71f823644}
+      \strng{bibnamehash}{215fbc026ef5947cf60cdca71f823644}
+      \strng{authorbibnamehash}{215fbc026ef5947cf60cdca71f823644}
+      \strng{authornamehash}{215fbc026ef5947cf60cdca71f823644}
+      \strng{authorfullhash}{215fbc026ef5947cf60cdca71f823644}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{1997 IEEE Ultrasonics Symposium Proceedings. An International Symposium (Cat. No.97CH36118)}
+      \field{month}{10}
+      \field{title}{A new imaging technique based on the nonlinear properties of tissues}
+      \field{volume}{2}
+      \field{year}{1997}
+      \field{pages}{1561\bibrangedash 1566 vol.2}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/ULTSYM.1997.663294
+      \endverb
+      \keyw{ultrasonic propagation;nonlinear acoustics;biological tissues;biomedical ultrasonics;medical US imaging technique;tissue nonlinear properties;dynamic range;digital architecture;tissue generated harmonic energy;image formation;routine diagnostic scanning;subharmonic energy;reduced nearfield artifacts;improved tissue structure visualization;tissue thermoviscous absorption;medical diagnostic imaging;Nonlinear distortion;Acoustic propagation;Medical diagnostic imaging;Biomedical imaging;Absorption;Frequency dependence;Dynamic range;Digital signal processing;Ultrasonic imaging;Signal generators}
+    \endentry
+    \entry{muir1980prediction}{article}{}
+      \name{author}{2}{}{%
+        {{hash=86b0056a40de190feda5b5bc53b95ae2}{%
+           family={Muir},
+           familyi={M\bibinitperiod},
+           given={TG},
+           giveni={T\bibinitperiod}}}%
+        {{hash=34b51dc5cf7c13d9e7cd5bbe8495093f}{%
+           family={Carstensen},
+           familyi={C\bibinitperiod},
+           given={EL},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{41c671f278404a1a0293cca6f37e8060}
+      \strng{fullhash}{41c671f278404a1a0293cca6f37e8060}
+      \strng{bibnamehash}{41c671f278404a1a0293cca6f37e8060}
+      \strng{authorbibnamehash}{41c671f278404a1a0293cca6f37e8060}
+      \strng{authornamehash}{41c671f278404a1a0293cca6f37e8060}
+      \strng{authorfullhash}{41c671f278404a1a0293cca6f37e8060}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ultrasound in medicine \& biology}
+      \field{number}{4}
+      \field{title}{Prediction of nonlinear acoustic effects at biomedical frequencies and intensities}
+      \field{volume}{6}
+      \field{year}{1980}
+      \field{pages}{345\bibrangedash 357}
+      \range{pages}{13}
+    \endentry
+    \entry{starritt1986development}{article}{}
+      \name{author}{4}{}{%
+        {{hash=134b488e588b0d7424a248d86e258cc3}{%
+           family={Starritt},
+           familyi={S\bibinitperiod},
+           given={HC},
+           giveni={H\bibinitperiod}}}%
+        {{hash=b69d708c81e6bc2db9b9bf581bc65d24}{%
+           family={Duck},
+           familyi={D\bibinitperiod},
+           given={FA},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b2bff8d9d6ff0eaccf1fa2dc55158e7f}{%
+           family={Hawkins},
+           familyi={H\bibinitperiod},
+           given={AJ},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d9d01f5e98766f240568ca4a35628a15}{%
+           family={Humphrey},
+           familyi={H\bibinitperiod},
+           given={VF},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{7ac0826f52822721a350af5b65519343}
+      \strng{fullhash}{33fcd764c3b3fd6751c4464084f44a5b}
+      \strng{bibnamehash}{7ac0826f52822721a350af5b65519343}
+      \strng{authorbibnamehash}{7ac0826f52822721a350af5b65519343}
+      \strng{authornamehash}{7ac0826f52822721a350af5b65519343}
+      \strng{authorfullhash}{33fcd764c3b3fd6751c4464084f44a5b}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physics in Medicine \& Biology}
+      \field{number}{12}
+      \field{title}{The development of harmonic distortion in pulsed finite-amplitude ultrasound passing through liver}
+      \field{volume}{31}
+      \field{year}{1986}
+      \field{pages}{1401}
+      \range{pages}{1}
+    \endentry
+    \entry{humphrey2000nonlinear}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d8c08230be61b9d5bfdcd8d1be7ee52f}{%
+           family={Humphrey},
+           familyi={H\bibinitperiod},
+           given={Victor\bibnamedelima F},
+           giveni={V\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{d8c08230be61b9d5bfdcd8d1be7ee52f}
+      \strng{fullhash}{d8c08230be61b9d5bfdcd8d1be7ee52f}
+      \strng{bibnamehash}{d8c08230be61b9d5bfdcd8d1be7ee52f}
+      \strng{authorbibnamehash}{d8c08230be61b9d5bfdcd8d1be7ee52f}
+      \strng{authornamehash}{d8c08230be61b9d5bfdcd8d1be7ee52f}
+      \strng{authorfullhash}{d8c08230be61b9d5bfdcd8d1be7ee52f}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ultrasonics}
+      \field{number}{1-8}
+      \field{title}{Nonlinear propagation in ultrasonic fields: measurements, modelling and harmonic imaging}
+      \field{volume}{38}
+      \field{year}{2000}
+      \field{pages}{267\bibrangedash 272}
+      \range{pages}{6}
+    \endentry
+    \entry{cobbold2006foundations}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7efcbadd2cb62b164a28d224e8dc2889}{%
+           family={Cobbold},
+           familyi={C\bibinitperiod},
+           given={Richard\bibnamedelima SC},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford university press}%
+      }
+      \strng{namehash}{7efcbadd2cb62b164a28d224e8dc2889}
+      \strng{fullhash}{7efcbadd2cb62b164a28d224e8dc2889}
+      \strng{bibnamehash}{7efcbadd2cb62b164a28d224e8dc2889}
+      \strng{authorbibnamehash}{7efcbadd2cb62b164a28d224e8dc2889}
+      \strng{authornamehash}{7efcbadd2cb62b164a28d224e8dc2889}
+      \strng{authorfullhash}{7efcbadd2cb62b164a28d224e8dc2889}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Foundations of biomedical ultrasound}
+      \field{year}{2006}
+    \endentry
+    \entry{anvari2015primer}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2e5429d4c8d73bb7fa82bd007ded6ad5}{%
+           family={Anvari},
+           familyi={A\bibinitperiod},
+           given={Arash},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f27f3cd68206757924ef58b4e74c1299}{%
+           family={Forsberg},
+           familyi={F\bibinitperiod},
+           given={Flemming},
+           giveni={F\bibinitperiod}}}%
+        {{hash=05d72b96813a62ff07fedd589306d8a3}{%
+           family={Samir},
+           familyi={S\bibinitperiod},
+           given={Anthony\bibnamedelima E},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Radiological Society of North America}%
+      }
+      \strng{namehash}{9a1896d6726f4443d2951c5f80f6365b}
+      \strng{fullhash}{9a1896d6726f4443d2951c5f80f6365b}
+      \strng{bibnamehash}{9a1896d6726f4443d2951c5f80f6365b}
+      \strng{authorbibnamehash}{9a1896d6726f4443d2951c5f80f6365b}
+      \strng{authornamehash}{9a1896d6726f4443d2951c5f80f6365b}
+      \strng{authorfullhash}{9a1896d6726f4443d2951c5f80f6365b}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Radiographics}
+      \field{number}{7}
+      \field{title}{A primer on the physical principles of tissue harmonic imaging}
+      \field{volume}{35}
+      \field{year}{2015}
+      \field{pages}{1955\bibrangedash 1964}
+      \range{pages}{10}
+    \endentry
+    \entry{whittingham1999tissue}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9da16dd4cdd8f86f0467a13625360c7b}{%
+           family={Whittingham},
+           familyi={W\bibinitperiod},
+           given={TA},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{9da16dd4cdd8f86f0467a13625360c7b}
+      \strng{fullhash}{9da16dd4cdd8f86f0467a13625360c7b}
+      \strng{bibnamehash}{9da16dd4cdd8f86f0467a13625360c7b}
+      \strng{authorbibnamehash}{9da16dd4cdd8f86f0467a13625360c7b}
+      \strng{authornamehash}{9da16dd4cdd8f86f0467a13625360c7b}
+      \strng{authorfullhash}{9da16dd4cdd8f86f0467a13625360c7b}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European radiology}
+      \field{number}{3}
+      \field{title}{Tissue harmonic imaging}
+      \field{volume}{9}
+      \field{year}{1999}
+      \field{pages}{S323\bibrangedash S326}
+      \range{pages}{-1}
+    \endentry
+    \entry{dei_thesis}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=64232ad6c3b7c02c86f0943ebb3d27ec}{%
+           family={Dei},
+           familyi={D\bibinitperiod},
+           given={Kazuyuki},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Vanderbilt University}%
+      }
+      \strng{namehash}{64232ad6c3b7c02c86f0943ebb3d27ec}
+      \strng{fullhash}{64232ad6c3b7c02c86f0943ebb3d27ec}
+      \strng{bibnamehash}{64232ad6c3b7c02c86f0943ebb3d27ec}
+      \strng{authorbibnamehash}{64232ad6c3b7c02c86f0943ebb3d27ec}
+      \strng{authornamehash}{64232ad6c3b7c02c86f0943ebb3d27ec}
+      \strng{authorfullhash}{64232ad6c3b7c02c86f0943ebb3d27ec}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Model-Based Ultrasound Imaging for Challenging Acoustic Clutter Suppression}
+      \field{type}{phdthesis}
+      \field{year}{2019}
+    \endentry
+    \entry{fink1992time}{article}{}
+      \name{author}{1}{}{%
+        {{hash=06070cd888e5847c294e038954c8c2bf}{%
+           family={Fink},
+           familyi={F\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{06070cd888e5847c294e038954c8c2bf}
+      \strng{fullhash}{06070cd888e5847c294e038954c8c2bf}
+      \strng{bibnamehash}{06070cd888e5847c294e038954c8c2bf}
+      \strng{authorbibnamehash}{06070cd888e5847c294e038954c8c2bf}
+      \strng{authornamehash}{06070cd888e5847c294e038954c8c2bf}
+      \strng{authorfullhash}{06070cd888e5847c294e038954c8c2bf}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on ultrasonics, ferroelectrics, and frequency control}
+      \field{number}{5}
+      \field{title}{Time reversal of ultrasonic fields. I. Basic principles}
+      \field{volume}{39}
+      \field{year}{1992}
+      \field{pages}{555\bibrangedash 566}
+      \range{pages}{12}
+    \endentry
+    \entry{dahl2017coherence}{inproceedings}{}
+      \name{author}{9}{}{%
+        {{hash=0fe16e7ac18d189c2169f4270504331a}{%
+           family={Dahl},
+           familyi={D\bibinitperiod},
+           given={Jeremy\bibnamedelima J},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=fa1ad233a1b0e9d483ac3b3bc2dfeb5b}{%
+           family={Hyun},
+           familyi={H\bibinitperiod},
+           given={Dongwoon},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8dbac327f65c6734344493bf6ffa5dc5}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={You},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=de12f02876f4f85437aeb8603f6df51c}{%
+           family={Jakovljevic},
+           familyi={J\bibinitperiod},
+           given={Marko},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7c59d29e80a8c23fc60934aa7c242d86}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={Muyinatu\bibnamedelima AL},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=4bae1ed805a32462f82ed628cc0912bc}{%
+           family={Long},
+           familyi={L\bibinitperiod},
+           given={Will\bibnamedelima J},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ba3c27d80d5ca2d94bcb653601fa516e}{%
+           family={Bottenus},
+           familyi={B\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+        {{hash=9ffdaa11694793a1b8b3c9e36326375f}{%
+           family={Kakkad},
+           familyi={K\bibinitperiod},
+           given={Vaibhav},
+           giveni={V\bibinitperiod}}}%
+        {{hash=f9453d417592d7a090d08cd92c5e4d87}{%
+           family={Trahey},
+           familyi={T\bibinitperiod},
+           given={Gregg\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{accf142044f7cc9f39ca3031ec65ef67}
+      \strng{fullhash}{dfa51923082a71475716c806f3fb8351}
+      \strng{bibnamehash}{accf142044f7cc9f39ca3031ec65ef67}
+      \strng{authorbibnamehash}{accf142044f7cc9f39ca3031ec65ef67}
+      \strng{authornamehash}{accf142044f7cc9f39ca3031ec65ef67}
+      \strng{authorfullhash}{dfa51923082a71475716c806f3fb8351}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 IEEE International Ultrasonics Symposium (IUS)}
+      \field{title}{Coherence beamforming and its applications to the difficult-to-image patient}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+    \endentry
+    \entry{lediju2015resolution}{article}{}
+      \name{author}{3}{}{%
+        {{hash=696559cf2a790ff27915a62ba2c3bae4}{%
+           family={{Lediju Bell}},
+           familyi={L\bibinitperiod},
+           given={M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=fd63867ebdcb236ea8399ef4eb059e1d}{%
+           family={{Dahl}},
+           familyi={D\bibinitperiod},
+           given={J.\bibnamedelimi J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=bb48495fe06b0659f40e11b93c443e07}{%
+           family={{Trahey}},
+           familyi={T\bibinitperiod},
+           given={G.\bibnamedelimi E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{fad2d5317b376bb08c58aabe25f688d3}
+      \strng{fullhash}{fad2d5317b376bb08c58aabe25f688d3}
+      \strng{bibnamehash}{fad2d5317b376bb08c58aabe25f688d3}
+      \strng{authorbibnamehash}{fad2d5317b376bb08c58aabe25f688d3}
+      \strng{authornamehash}{fad2d5317b376bb08c58aabe25f688d3}
+      \strng{authorfullhash}{fad2d5317b376bb08c58aabe25f688d3}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control}
+      \field{month}{7}
+      \field{number}{7}
+      \field{title}{Resolution and brightness characteristics of short-lag spatial coherence (SLSC) images}
+      \field{volume}{62}
+      \field{year}{2015}
+      \field{pages}{1265\bibrangedash 1276}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/TUFFC.2014.006909
+      \endverb
+      \keyw{biomedical ultrasonics;brightness;clutter;brightness characteristics;short-lag spatial coherence images;spatial correlation;echo wave field;clutter reduction;high-noise environments;resolution characteristics;conventional delay-sum beamforming;point target widths;image texture autocorrelation;channel noise-signal ratios;clutter magnitudes;lateral resolution;axial resolution;correlation kernel length;texture size;matched B-mode images;Noise;Spatial coherence;Clutter;Correlation;Imaging;Spatial resolution;Computer Simulation;Image Processing,Computer-Assisted;Phantoms,Imaging;Ultrasonography}
+    \endentry
+    \entry{mallart1994adaptive}{article}{}
+      \name{author}{2}{}{%
+        {{hash=92e4e364b00151f6afeb66d40bdb62f9}{%
+           family={Mallart},
+           familyi={M\bibinitperiod},
+           given={Raoul},
+           giveni={R\bibinitperiod}}}%
+        {{hash=06070cd888e5847c294e038954c8c2bf}{%
+           family={Fink},
+           familyi={F\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ASA}%
+      }
+      \strng{namehash}{bac2472d5dd2f79a2fd348056d77b342}
+      \strng{fullhash}{bac2472d5dd2f79a2fd348056d77b342}
+      \strng{bibnamehash}{bac2472d5dd2f79a2fd348056d77b342}
+      \strng{authorbibnamehash}{bac2472d5dd2f79a2fd348056d77b342}
+      \strng{authornamehash}{bac2472d5dd2f79a2fd348056d77b342}
+      \strng{authorfullhash}{bac2472d5dd2f79a2fd348056d77b342}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of the Acoustical Society of America}
+      \field{number}{6}
+      \field{title}{Adaptive focusing in scattering media through sound-speed inhomogeneities: The van Cittert Zernike approach and focusing criterion}
+      \field{volume}{96}
+      \field{year}{1994}
+      \field{pages}{3721\bibrangedash 3732}
+      \range{pages}{12}
+    \endentry
+    \entry{hollman1999coherence}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=f1e7cecd5cf33ad20b4a1d7622957edb}{%
+           family={Hollman},
+           familyi={H\bibinitperiod},
+           given={KW},
+           giveni={K\bibinitperiod}}}%
+        {{hash=885ecc2893a7db2a52a31c77ec30a1d2}{%
+           family={Rigby},
+           familyi={R\bibinitperiod},
+           given={KW},
+           giveni={K\bibinitperiod}}}%
+        {{hash=18659fed2679d32922f28288927d8b7b}{%
+           family={O'donnell},
+           familyi={O\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{f985969c49bc9fa2c7c40557fda22b96}
+      \strng{fullhash}{f985969c49bc9fa2c7c40557fda22b96}
+      \strng{bibnamehash}{f985969c49bc9fa2c7c40557fda22b96}
+      \strng{authorbibnamehash}{f985969c49bc9fa2c7c40557fda22b96}
+      \strng{authornamehash}{f985969c49bc9fa2c7c40557fda22b96}
+      \strng{authorfullhash}{f985969c49bc9fa2c7c40557fda22b96}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{1999 IEEE Ultrasonics Symposium. Proceedings. International Symposium (Cat. No. 99CH37027)}
+      \field{title}{Coherence factor of speckle from a multi-row probe}
+      \field{volume}{2}
+      \field{year}{1999}
+      \field{pages}{1257\bibrangedash 1260}
+      \range{pages}{4}
+    \endentry
+    \entry{synnevag2007adaptive}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f85c968c1441e486d7e0e2a6db9bc230}{%
+           family={Synnevag},
+           familyi={S\bibinitperiod},
+           given={Johan\bibnamedelima Fredrik},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=78cdea8d28154556300f7c12b67117e4}{%
+           family={Austeng},
+           familyi={A\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=561c826f78aee119dd5f19abd467b8d8}{%
+           family={Holm},
+           familyi={H\bibinitperiod},
+           given={Sverre},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8e6c6b1870a05e8886f30f1b276522d1}
+      \strng{fullhash}{8e6c6b1870a05e8886f30f1b276522d1}
+      \strng{bibnamehash}{8e6c6b1870a05e8886f30f1b276522d1}
+      \strng{authorbibnamehash}{8e6c6b1870a05e8886f30f1b276522d1}
+      \strng{authornamehash}{8e6c6b1870a05e8886f30f1b276522d1}
+      \strng{authorfullhash}{8e6c6b1870a05e8886f30f1b276522d1}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on ultrasonics, ferroelectrics, and frequency control}
+      \field{number}{8}
+      \field{title}{Adaptive beamforming applied to medical ultrasound imaging}
+      \field{volume}{54}
+      \field{year}{2007}
+      \field{pages}{1606\bibrangedash 1613}
+      \range{pages}{8}
+    \endentry
+    \entry{holfort2009broadband}{article}{}
+      \name{author}{3}{}{%
+        {{hash=0f21d9078194364a3e63bf3cf4be53a1}{%
+           family={Holfort},
+           familyi={H\bibinitperiod},
+           given={Iben\bibnamedelima Kraglund},
+           giveni={I\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=072ef0994f3cc10df4042b20595714d9}{%
+           family={Gran},
+           familyi={G\bibinitperiod},
+           given={Fredrik},
+           giveni={F\bibinitperiod}}}%
+        {{hash=473da9b792dc4ab73b7187296e06fb65}{%
+           family={Jensen},
+           familyi={J\bibinitperiod},
+           given={Jorgen\bibnamedelima Arendt},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a2907289956190eb86667434eb0c738c}
+      \strng{fullhash}{a2907289956190eb86667434eb0c738c}
+      \strng{bibnamehash}{a2907289956190eb86667434eb0c738c}
+      \strng{authorbibnamehash}{a2907289956190eb86667434eb0c738c}
+      \strng{authornamehash}{a2907289956190eb86667434eb0c738c}
+      \strng{authorfullhash}{a2907289956190eb86667434eb0c738c}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on ultrasonics, ferroelectrics, and frequency control}
+      \field{number}{2}
+      \field{title}{Broadband minimum variance beamforming for ultrasound imaging}
+      \field{volume}{56}
+      \field{year}{2009}
+      \field{pages}{314\bibrangedash 325}
+      \range{pages}{12}
+    \endentry
+    \entry{szasz_regularized_inverse}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f67076e4ef50863bebc12c96aaf4b4e3}{%
+           family={{Szasz}},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f1790c41842f73f89fbdd6037bd9f103}{%
+           family={{Basarab}},
+           familyi={B\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a46c2f2e2077ecbe4b052543f2078eb0}{%
+           family={{Kouamé}},
+           familyi={K\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{30788cc25387792d32e40baebfb10a66}
+      \strng{fullhash}{30788cc25387792d32e40baebfb10a66}
+      \strng{bibnamehash}{30788cc25387792d32e40baebfb10a66}
+      \strng{authorbibnamehash}{30788cc25387792d32e40baebfb10a66}
+      \strng{authornamehash}{30788cc25387792d32e40baebfb10a66}
+      \strng{authorfullhash}{30788cc25387792d32e40baebfb10a66}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control}
+      \field{month}{12}
+      \field{number}{12}
+      \field{title}{Beamforming Through Regularized Inverse Problems in Ultrasound Medical Imaging}
+      \field{volume}{63}
+      \field{year}{2016}
+      \field{pages}{2031\bibrangedash 2044}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1109/TUFFC.2016.2608939
+      \endverb
+      \keyw{array signal processing;biomedical ultrasonics;Gaussian processes;inverse problems;medical image processing;ultrasound medical imaging;regularized inverse problem;linear model;Laplacian statistics;Gaussian statistics;adaptive beamforming;Array signal processing;Imaging;Radio frequency;Probes;Inverse problems;Image resolution;Covariance matrices;Adaptive beamforming (BF);basis pursuit (BP);beamspace processing;least squares (LS);linear inverse problems;Carotid Arteries;Humans;Image Processing,Computer-Assisted;Phantoms,Imaging;Thyroid Gland;Ultrasonography}
+    \endentry
+    \entry{rumelhart1985learning}{report}{}
+      \name{author}{3}{}{%
+        {{hash=d198ae71c61c758b90826c452447133f}{%
+           family={Rumelhart},
+           familyi={R\bibinitperiod},
+           given={David\bibnamedelima E},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=5aeb1de9b6c6f00a078230c628e6f41c}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=f0fac00adb48128fc1f7750b2d8e7065}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Ronald\bibnamedelima J},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {California Univ San Diego La Jolla Inst for Cognitive Science}%
+      }
+      \strng{namehash}{6c0c2652b5e4e9258c40ce50c5704c6b}
+      \strng{fullhash}{6c0c2652b5e4e9258c40ce50c5704c6b}
+      \strng{bibnamehash}{6c0c2652b5e4e9258c40ce50c5704c6b}
+      \strng{authorbibnamehash}{6c0c2652b5e4e9258c40ce50c5704c6b}
+      \strng{authornamehash}{6c0c2652b5e4e9258c40ce50c5704c6b}
+      \strng{authorfullhash}{6c0c2652b5e4e9258c40ce50c5704c6b}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Learning internal representations by error propagation}
+      \field{type}{techreport}
+      \field{year}{1985}
+    \endentry
+    \entry{lenet}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{hash=6a1aa6b7eab12b931ca7c7e3f927231d}{%
+           family={LeCun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=4437d12f87aa10b0c95e9e587862f7ab}{%
+           family={Bottou},
+           familyi={B\bibinitperiod},
+           given={L{é}on},
+           giveni={L\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=844e183692f08a63f99285330fcf90cc}{%
+           family={Haffner},
+           familyi={H\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taipei, Taiwan}%
+      }
+      \strng{namehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{fullhash}{42172b2d9585ff08d91ea80787027307}
+      \strng{bibnamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authorbibnamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authornamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authorfullhash}{42172b2d9585ff08d91ea80787027307}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{number}{11}
+      \field{title}{Gradient-based learning applied to document recognition}
+      \field{volume}{86}
+      \field{year}{1998}
+      \field{pages}{2278\bibrangedash 2324}
+      \range{pages}{47}
+    \endentry
+    \entry{krizhevsky2012imagenet}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=5aeb1de9b6c6f00a078230c628e6f41c}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \strng{fullhash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \strng{bibnamehash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \strng{authorbibnamehash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \strng{authornamehash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \strng{authorfullhash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in neural information processing systems}
+      \field{title}{Imagenet classification with deep convolutional neural networks}
+      \field{year}{2012}
+      \field{pages}{1097\bibrangedash 1105}
+      \range{pages}{9}
+    \endentry
+    \entry{bergstra2012random}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0bc66fe902c838c216bd3175dfeb045b}{%
+           family={Bergstra},
+           familyi={B\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{a05cf9842110d2caa7fbdda862c52ff8}
+      \strng{fullhash}{a05cf9842110d2caa7fbdda862c52ff8}
+      \strng{bibnamehash}{a05cf9842110d2caa7fbdda862c52ff8}
+      \strng{authorbibnamehash}{a05cf9842110d2caa7fbdda862c52ff8}
+      \strng{authornamehash}{a05cf9842110d2caa7fbdda862c52ff8}
+      \strng{authorfullhash}{a05cf9842110d2caa7fbdda862c52ff8}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{Feb}
+      \field{title}{Random search for hyper-parameter optimization}
+      \field{volume}{13}
+      \field{year}{2012}
+      \field{pages}{281\bibrangedash 305}
+      \range{pages}{25}
+    \endentry
+    \entry{long2015fcn}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=17faae490b91366d25e0e2d774e7b6b1}{%
+           family={Long},
+           familyi={L\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4ce499f8943cac7cba0a73388d289a2e}{%
+           family={Shelhamer},
+           familyi={S\bibinitperiod},
+           given={Evan},
+           giveni={E\bibinitperiod}}}%
+        {{hash=90180e1a30742e0d15328bfe637c2ef4}{%
+           family={Darrell},
+           familyi={D\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4f969c1eddab717aa873b0a90831c45a}
+      \strng{fullhash}{4f969c1eddab717aa873b0a90831c45a}
+      \strng{bibnamehash}{4f969c1eddab717aa873b0a90831c45a}
+      \strng{authorbibnamehash}{4f969c1eddab717aa873b0a90831c45a}
+      \strng{authornamehash}{4f969c1eddab717aa873b0a90831c45a}
+      \strng{authorfullhash}{4f969c1eddab717aa873b0a90831c45a}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE conference on computer vision and pattern recognition}
+      \field{title}{Fully convolutional networks for semantic segmentation}
+      \field{year}{2015}
+      \field{pages}{3431\bibrangedash 3440}
+      \range{pages}{10}
+    \endentry
+    \entry{ronneberger2015unet}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=8e46da9de9e53ea5d37089897d69cdd9}{%
+           family={Ronneberger},
+           familyi={R\bibinitperiod},
+           given={Olaf},
+           giveni={O\bibinitperiod}}}%
+        {{hash=168e84ce3582cbc6bac5e2ebc3ef8442}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b452a32296958371572717940f900884}{%
+           family={Brox},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{fullhash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{bibnamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authorbibnamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authornamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authorfullhash}{f23ccc5160c62c7866172335b2c76e11}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Medical image computing and computer-assisted intervention}
+      \field{title}{U-net: Convolutional networks for biomedical image segmentation}
+      \field{year}{2015}
+      \field{pages}{234\bibrangedash 241}
+      \range{pages}{8}
+    \endentry
+    \entry{ballard1987modular}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=59fd36e81a87d5dc0ad95e1fdbb523c1}{%
+           family={Ballard},
+           familyi={B\bibinitperiod},
+           given={Dana\bibnamedelima H},
+           giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{59fd36e81a87d5dc0ad95e1fdbb523c1}
+      \strng{fullhash}{59fd36e81a87d5dc0ad95e1fdbb523c1}
+      \strng{bibnamehash}{59fd36e81a87d5dc0ad95e1fdbb523c1}
+      \strng{authorbibnamehash}{59fd36e81a87d5dc0ad95e1fdbb523c1}
+      \strng{authornamehash}{59fd36e81a87d5dc0ad95e1fdbb523c1}
+      \strng{authorfullhash}{59fd36e81a87d5dc0ad95e1fdbb523c1}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{AAAI}
+      \field{title}{Modular Learning in Neural Networks.}
+      \field{year}{1987}
+      \field{pages}{279\bibrangedash 284}
+      \range{pages}{6}
+    \endentry
+    \entry{szegedy2015going}{inproceedings}{}
+      \name{author}{9}{}{%
+        {{hash=ed568d9c3bb059e6bf22899fbf170f86}{%
+           family={Szegedy},
+           familyi={S\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c0e0d23e2d09e45e6f51cc2bcea6d9f9}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=9fce03efe6b3331a1b93ed2e7c0da9d5}{%
+           family={Jia},
+           familyi={J\bibinitperiod},
+           given={Yangqing},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=15f5333df96deaf51c72d065bded37d8}{%
+           family={Sermanet},
+           familyi={S\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=698ee61a2f3fa29734204496d2d36aef}{%
+           family={Reed},
+           familyi={R\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c1826f3465579186aff299a9b0e16ed7}{%
+           family={Anguelov},
+           familyi={A\bibinitperiod},
+           given={Dragomir},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8bbc4c5d96f205bada839e74e0202146}{%
+           family={Erhan},
+           familyi={E\bibinitperiod},
+           given={Dumitru},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8051922e7bd286f884bfbd1023ef62f5}{%
+           family={Vanhoucke},
+           familyi={V\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=aa04c4d6213a1e867b1650e298cb2668}{%
+           family={Rabinovich},
+           familyi={R\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{80f8e6bfc3aff3e75b2807a6f6962740}
+      \strng{fullhash}{64fbaf3c8a6b53523f74f0087b58e7e6}
+      \strng{bibnamehash}{80f8e6bfc3aff3e75b2807a6f6962740}
+      \strng{authorbibnamehash}{80f8e6bfc3aff3e75b2807a6f6962740}
+      \strng{authornamehash}{80f8e6bfc3aff3e75b2807a6f6962740}
+      \strng{authorfullhash}{64fbaf3c8a6b53523f74f0087b58e7e6}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE conference on computer vision and pattern recognition}
+      \field{title}{Going deeper with convolutions}
+      \field{year}{2015}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+    \endentry
+    \entry{fischer2015image}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=168e84ce3582cbc6bac5e2ebc3ef8442}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=72308762399d6ab62bbd9391c64c7bfd}{%
+           family={Dosovitskiy},
+           familyi={D\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b452a32296958371572717940f900884}{%
+           family={Brox},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b23e0b1c8ccc9915286b24710cbbe155}
+      \strng{fullhash}{b23e0b1c8ccc9915286b24710cbbe155}
+      \strng{bibnamehash}{b23e0b1c8ccc9915286b24710cbbe155}
+      \strng{authorbibnamehash}{b23e0b1c8ccc9915286b24710cbbe155}
+      \strng{authornamehash}{b23e0b1c8ccc9915286b24710cbbe155}
+      \strng{authorfullhash}{b23e0b1c8ccc9915286b24710cbbe155}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{German Conference on Pattern Recognition}
+      \field{title}{Image orientation estimation with convolutional networks}
+      \field{year}{2015}
+      \field{pages}{368\bibrangedash 378}
+      \range{pages}{11}
+    \endentry
+    \entry{training_improvements}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5141debcae32fab6be482b10661e230c}{%
+           family={Luchies},
+           familyi={L\bibinitperiod},
+           given={Adam\bibnamedelima C},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=7a7d6b439e5b22bd6e3b07a9562deadb}{%
+           family={Byram},
+           familyi={B\bibinitperiod},
+           given={Brett\bibnamedelima C},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{5984454b1a327ae8cf6d515208e7d1b3}
+      \strng{fullhash}{5984454b1a327ae8cf6d515208e7d1b3}
+      \strng{bibnamehash}{5984454b1a327ae8cf6d515208e7d1b3}
+      \strng{authorbibnamehash}{5984454b1a327ae8cf6d515208e7d1b3}
+      \strng{authornamehash}{5984454b1a327ae8cf6d515208e7d1b3}
+      \strng{authorfullhash}{5984454b1a327ae8cf6d515208e7d1b3}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physics in medicine and biology}
+      \field{title}{Training improvements for ultrasound beamforming with deep neural networks}
+      \field{year}{2019}
+    \endentry
+    \entry{yoon2018efficient}{article}{}
+      \name{author}{4}{}{%
+        {{hash=3d53af822adc31f1974dd6399b012642}{%
+           family={Yoon},
+           familyi={Y\bibinitperiod},
+           given={Yeo\bibnamedelima Hun},
+           giveni={Y\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=2553dde9cbb86176f6c7512e7c54d982}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Shujaat},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7726ac37ccc2a5032293eaa686a42715}{%
+           family={Huh},
+           familyi={H\bibinitperiod},
+           given={Jaeyoung},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4d9916066c4bbffb74c95fbb365ef41b}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Jong\bibnamedelima Chul},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{1a9ebe35b922250e95be89539d908fb3}
+      \strng{fullhash}{a7d0c87c0996b01f112d1894e873947d}
+      \strng{bibnamehash}{1a9ebe35b922250e95be89539d908fb3}
+      \strng{authorbibnamehash}{1a9ebe35b922250e95be89539d908fb3}
+      \strng{authornamehash}{1a9ebe35b922250e95be89539d908fb3}
+      \strng{authorfullhash}{a7d0c87c0996b01f112d1894e873947d}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on medical imaging}
+      \field{number}{2}
+      \field{title}{Efficient b-mode ultrasound image reconstruction from sub-sampled rf data using deep learning}
+      \field{volume}{38}
+      \field{year}{2018}
+      \field{pages}{325\bibrangedash 336}
+      \range{pages}{12}
+    \endentry
+    \entry{hyun2019beamforming}{article}{}
+      \name{author}{4}{}{%
+        {{hash=fa1ad233a1b0e9d483ac3b3bc2dfeb5b}{%
+           family={Hyun},
+           familyi={H\bibinitperiod},
+           given={Dongwoon},
+           giveni={D\bibinitperiod}}}%
+        {{hash=7d2ab13678210b52303d9c6a415a21d4}{%
+           family={Brickson},
+           familyi={B\bibinitperiod},
+           given={Leandra\bibnamedelima L},
+           giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=bd79f44a58f60349aa4d589cb9e6f038}{%
+           family={Looby},
+           familyi={L\bibinitperiod},
+           given={Kevin\bibnamedelima T},
+           giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=0fe16e7ac18d189c2169f4270504331a}{%
+           family={Dahl},
+           familyi={D\bibinitperiod},
+           given={Jeremy\bibnamedelima J},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3e144a51d6486cb11d90334efa526f89}
+      \strng{fullhash}{b14a4cd64319914a3536bf7df6c4cc62}
+      \strng{bibnamehash}{3e144a51d6486cb11d90334efa526f89}
+      \strng{authorbibnamehash}{3e144a51d6486cb11d90334efa526f89}
+      \strng{authornamehash}{3e144a51d6486cb11d90334efa526f89}
+      \strng{authorfullhash}{b14a4cd64319914a3536bf7df6c4cc62}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on ultrasonics, ferroelectrics, and frequency control}
+      \field{number}{5}
+      \field{title}{Beamforming and Speckle Reduction Using Neural Networks}
+      \field{volume}{66}
+      \field{year}{2019}
+      \field{pages}{898\bibrangedash 910}
+      \range{pages}{13}
+    \endentry
+    \entry{jensen1992calculation}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7368da1930fe162d6ad40abf063ec03c}{%
+           family={Jensen},
+           familyi={J\bibinitperiod},
+           given={J{ø}rgen\bibnamedelima Arendt},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=83e9072483468cd39fc9754993649044}{%
+           family={Svendsen},
+           familyi={S\bibinitperiod},
+           given={Niels\bibnamedelima Bruun},
+           giveni={N\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{f38d1d2c6e57b87b2eb5c389aca637e3}
+      \strng{fullhash}{f38d1d2c6e57b87b2eb5c389aca637e3}
+      \strng{bibnamehash}{f38d1d2c6e57b87b2eb5c389aca637e3}
+      \strng{authorbibnamehash}{f38d1d2c6e57b87b2eb5c389aca637e3}
+      \strng{authornamehash}{f38d1d2c6e57b87b2eb5c389aca637e3}
+      \strng{authorfullhash}{f38d1d2c6e57b87b2eb5c389aca637e3}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on ultrasonics, ferroelectrics, and frequency control}
+      \field{number}{2}
+      \field{title}{Calculation of pressure fields from arbitrarily shaped, apodized, and excited ultrasound transducers}
+      \field{volume}{39}
+      \field{year}{1992}
+      \field{pages}{262\bibrangedash 267}
+      \range{pages}{6}
+    \endentry
+    \entry{jensen1996field}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=7368da1930fe162d6ad40abf063ec03c}{%
+           family={Jensen},
+           familyi={J\bibinitperiod},
+           given={J{ø}rgen\bibnamedelima Arendt},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{7368da1930fe162d6ad40abf063ec03c}
+      \strng{fullhash}{7368da1930fe162d6ad40abf063ec03c}
+      \strng{bibnamehash}{7368da1930fe162d6ad40abf063ec03c}
+      \strng{authorbibnamehash}{7368da1930fe162d6ad40abf063ec03c}
+      \strng{authornamehash}{7368da1930fe162d6ad40abf063ec03c}
+      \strng{authorfullhash}{7368da1930fe162d6ad40abf063ec03c}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{10TH NORDICBALTIC CONFERENCE ON BIOMEDICAL IMAGING, VOL. 4, SUPPLEMENT 1, PART 1: 351--353}
+      \field{title}{Field: A program for simulating ultrasound systems}
+      \field{year}{1996}
+    \endentry
+    \entry{luo2016understanding}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=fee2dc6fa06749f77c71613df778f0f5}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Wenjie},
+           giveni={W\bibinitperiod}}}%
+        {{hash=ccd1e47b05491aa37da5d040a0b406f6}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yujia},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=bc58c1e920023b071a4d0695299cf804}{%
+           family={Urtasun},
+           familyi={U\bibinitperiod},
+           given={Raquel},
+           giveni={R\bibinitperiod}}}%
+        {{hash=77a44166b8233ae29b20f292779447e0}{%
+           family={Zemel},
+           familyi={Z\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{59cf3a34110c5d15fa21d4af9e841194}
+      \strng{fullhash}{71fcce76d05e240fd45624ef87206c65}
+      \strng{bibnamehash}{59cf3a34110c5d15fa21d4af9e841194}
+      \strng{authorbibnamehash}{59cf3a34110c5d15fa21d4af9e841194}
+      \strng{authornamehash}{59cf3a34110c5d15fa21d4af9e841194}
+      \strng{authorfullhash}{71fcce76d05e240fd45624ef87206c65}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in neural information processing systems}
+      \field{title}{Understanding the effective receptive field in deep convolutional neural networks}
+      \field{year}{2016}
+      \field{pages}{4898\bibrangedash 4906}
+      \range{pages}{9}
     \endentry
   \enddatalist
 \endrefsection

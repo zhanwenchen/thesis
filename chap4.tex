@@ -130,11 +130,26 @@ Learning Rate & 1.803e-4 \\ \bottomrule
 
   \begin{figure}[htbp]
     \centerline{\includegraphics[width=85mm,scale=0.5]{in_vivo_das_mlp_fcn.png}}
-    \caption{For an in vivo target, DAS has a CNR of -14.98, MLP -0.80, LeNet -5.92}
+    \caption{For an in vivo target, DAS has a CNR of -14.98, MLP -0.80, FCN -5.92}
     \label{fig}
   \end{figure}
 
+  The full range of models performance for FCNs with outliers, as a function of the log number of weights, is shown in Figure \ref{fig:cnr_vs_num_weights_fcns_mlps}. The same distribution without outliers is shown in Figure \ref{fig:cnr_vs_num_weights_fcns_mlps_no_outliers}.
 
+  \begin{figure}[htbp]
+    \centerline{\includegraphics[width=85mm,scale=0.5]{cnr_vs_num_weights_fcns_mlps.png}}
+    \caption{Phantom average CNR as a function of the log number of weights (with outliers), FCNs and MLPs}
+    \label{fig:cnr_vs_num_weights_fcns_mlps}
+  \end{figure}
+
+  \begin{figure}[htbp]
+    \centerline{\includegraphics[width=85mm,scale=0.5]{cnr_vs_num_weights_fcns_mlps_no_outliers.png}}
+    \caption{Phantom average CNR as a function of the log number of weights (without outliers), FCNs and MLPs}
+    \label{fig:cnr_vs_num_weights_fcns_mlps_no_outliers}
+  \end{figure}
+
+% TODO: show all the models.
+% TODO: Show another architecture: FCN-N
 % \subsection{Phantom CNR vs. Kernel Size}
 % Waiting for more results.
 % % We investigated the relationship between the kernel size and the average CNR value.

@@ -67,9 +67,10 @@ In addition, studies have shown that deep neural networks are effective in suppr
 
 % TODO introduce why the frequency domain.
 \section{Contribution} % Contribution
-No one has applied Convolutional Neural Networks on the STFT-domain data.
-
-The aim of this thesis is to investigate the effectiveness of convolutional neural networks (CNNs) in suppressing off-axis scattering and reverberation clutter. Particularly, I apply CNNs to signals in the aperture short-time Fourier transform (STFT) domain to avoid having to train for for different pulse shapes, depth dependent attenuation, and other pulse parameters that may vary across patients and even across probes as they age. I will discuss the rationale in detail in Chapter 2.
+% No one has applied Convolutional Neural Networks on the STFT-domain data.
+This thesis provides a pioneering study of the effectiveness of convolutional neural networks on suppressing off-axis scattering in the frequency domain. I first show that models with both convolutional layers and fully-connected layers can approximate the performance of MLPs in suppressing noise and improving CNR. I further study the mechanism of convolution on the model performance and find that fully-convolutional networks (FCNs) do not perform as well as MLPs but outperform the DAS benchmark. By investigating the effect of kernel size and the number of convolutional layers on CNR, I find that convolutions do not solve the noise suppression problem better than MLPs; in fact, FCNs approximate MLPs by hainvg a large receptive field to cover either the complex component or the entire input space.
+%
+% The aim of this thesis is to investigate the effectiveness of convolutional neural networks (CNNs) in suppressing off-axis scattering and reverberation clutter. Particularly, I apply CNNs to signals in the aperture short-time Fourier transform (STFT) domain to avoid having to train for for different pulse shapes, depth dependent attenuation, and other pulse parameters that may vary across patients and even across probes as they age. I will discuss the rationale in detail in Chapter 2.
 
 \section{Organization}
 Chapter 2 discusses background on deep neural networks and related work on noise suppression with deep learning and CNN-based beamforming. Chapter 3 describes the training data generation process and signal grouping. Chapter 4 explains the CNN architectures and the training pipeline, including a random hyperparameter search technique. Chapter 5 details the beamforming pipeline for evaluation. Chapter 6 addresses the limitations of this work, discusses the results, and concludes the thesis with potential future work.

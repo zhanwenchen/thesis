@@ -344,7 +344,7 @@
 \def\othermembers#1{\gdef\@othermembers{#1}}
 
 % The number of committee members
-\def\@numberofmembers{3}
+\def\@numberofmembers{2} % CHANGED: previously hard-coded as 3
 \def\numberofmembers#1{\gdef\@numberofmembers{#1}}
 
 % The name of your degree's field (e.g. Psychology, Computer Science)
@@ -513,7 +513,7 @@ by\par
 \begin{alwayssingle}
 % \pagestyle{simple}
 \thispagestyle{simple}
-\setcounter{page}{1}
+% \setcounter{page}{1}
 \begin{center}
 {\fmfont
 {\bfseries \abstractname}\par

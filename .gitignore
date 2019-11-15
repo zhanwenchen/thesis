@@ -9,3 +9,9 @@
 *.bcf
 example_theses/
 ..bfg-report
+models/
+guidelines/
+references/
+~$*.pptx
+*.mp4
+*.mkv

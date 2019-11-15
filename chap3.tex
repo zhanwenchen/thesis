@@ -25,6 +25,7 @@ There are three cases in this training data: accept, reject, and discriminate. I
 
 
 % TODO: Should I talk about convolution at all? Probably should because 1. I talk about 1D vs 2D convolution. 2. I talk about CNR as a function of increasing kernel size and what that implies.
+% TODO: Talk about receptive field for convolution
 
 % \section{Convolution}
 
@@ -33,6 +34,12 @@ There are three cases in this training data: accept, reject, and discriminate. I
 % TODO: Should I put groupings in this at all?
 \section{Grouping of Real and Imaginary Input Componenets}
 The MLP beamformers developed by Luchies and Byram concatenate the real and imaginary componenets of the STFT data. However, as spatial order matters for CNNs, it is not clear how they should be grouped as inputs to the neural networks. As a result, we studied three different groupings: concatenation, channel-stacking, and height-stacking. The concatenation is simply appending the imaginary component to the real component. This is the same as in Luchies and Byram and would be a 1D input of length 130. Channel-stacking would have two 1D signal of length 65 on each of two input channels. The third case, height-stacking, is to form a 2D image whose height is 2, width is 65, and on a single channel. This case can be understood as a narrow gray image. The first two cases use 1D convolution, whereas 2D convolution applies to the third case.
+
+\begin{figure}
+  \centerline{\includegraphics[width=85mm,scale=0.5]{iq_groupings.png}}
+  \caption{Top to bottom: 1D, single-channel convolution. 1D, two-channel convolution. 2D, 1-channel convolution.}
+  \label{fig}
+\end{figure}
 
 
 \section{CNN Architectures}
@@ -51,7 +58,7 @@ The MLP beamformers developed by Luchies and Byram concatenate the real and imag
   % TODO: last study to match # weights between FCN and best MLP
   % The last study for FCNs is the
 
-  \section{MLP with Bottlenecks (MBP)}
+  \section{MLP with Bottlenecks (MLPB)}
   Our last study is to investigate why MLPs perform well as indicated by Luchies and Byram. We created an MLP similar to their best-performing one with 5 layers with 1040 hidden nodes in each layer. We varied the number of nodes in the 3rd fully-connected layer to investigate the effect of bottlenecking the neural network. If a narrower intermediate layer can achieve a similar level of performance, then it would imply that there is a more generalizable representation than the full MLP.
 
 
